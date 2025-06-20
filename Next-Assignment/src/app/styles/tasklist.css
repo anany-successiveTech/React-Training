@@ -1,0 +1,51 @@
+.tasklist-wrapper {
+  display: flex;
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  min-height: 100vh;        /* fill viewport height */
+  background-color: #121212; /* background */
+  padding: 1rem;
+}
+.task-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tasklist-container {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.tasklist-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.tasklist {
+  list-style: decimal inside;
+  padding-left: 0;
+}
+
+.tasklist-item {
+  background-color: #2b2b2b;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.tasklist-item:hover {
+  background-color: #3a3a3a;
+}
+
+
