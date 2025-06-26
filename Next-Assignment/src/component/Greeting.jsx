@@ -4,10 +4,10 @@
 import '../app/styles/home.css'
 
 import React from 'react'
-const Greeting = () => {
+const Greeting = ({text}) => {
   return (
     <div className='header'>
-      <h1>Hello, Next.js!</h1>
+      <h1>{text || 'Hello, Next.js!'}</h1>
     </div>
   );
 }

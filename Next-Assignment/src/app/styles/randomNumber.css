@@ -1,0 +1,49 @@
+.random-container{
+    width: 30rem;
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(27, 26, 26);
+    border-radius: 1rem;
+}
+.light .random-container{
+    width: 30rem;
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(236, 231, 231);
+    border-radius: 1rem;
+}
+.number-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.generator-btn{
+    margin-top: 5rem;
+}
+.generator-btn button{
+    padding: 1rem;
+    font-size: large;
+    border-radius: 0.5rem;
+    border: none;
+}
+.light .generator-btn button{
+    padding: 1rem;
+    font-size: large;
+    border-radius: 0.5rem;
+    background-color: aliceblue;
+    border: none;
+}
+.generator-btn button:hover{
+    background-color: #4285F4;
+}

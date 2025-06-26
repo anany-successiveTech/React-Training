@@ -1,0 +1,16 @@
+.input-container{
+    padding: 2rem;
+
+}
+.dark .input-container input{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(14, 14, 14);
+    border: none;
+}
+.light .input-container input{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: rgb(238, 238, 238);
+}

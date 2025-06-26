@@ -1,6 +1,6 @@
 'use client'
 
-import Tasklist from '@/component/tasklist';
+import Tasklist from '@/component/Tasklist';
 import React from 'react'
 
 const Page = () => {

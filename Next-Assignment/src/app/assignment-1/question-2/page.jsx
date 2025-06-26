@@ -4,7 +4,7 @@
 
 
 import React, { use } from 'react'
-import UserCard from '../../../component/userCard';
+import UserCard from '../../../component/UserCard';
 import '../../styles/home.css'
 
 const User = () => {

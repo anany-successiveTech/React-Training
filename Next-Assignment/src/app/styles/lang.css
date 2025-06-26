@@ -1,0 +1,26 @@
+/* languagePage.css */
+
+.text-center {
+  text-align: center;
+}
+
+.margin-2rem {
+  margin: 2rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper {
+  text-align: center;
+}
+.button-group button{
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}

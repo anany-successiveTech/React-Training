@@ -1,0 +1,165 @@
+/* tasklist.css */
+
+.task-container {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #3e3e3e; /* dark grey container */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f1f1;
+}
+
+.task-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #666;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+.task-input::placeholder 
+{
+  color: #aaa;
+}
+
+
+.task-button {
+  padding: 0.6rem 1rem;
+  background-color: #4285f4;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-button:hover {
+  background-color: #218838;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  background-color: #4e4e4e;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.task-item:hover {
+  background-color: #5c5c5c;
+}
+
+/* This style is only applicable to the checkbox abd the delete button inside the each <li> item */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4e4e4e;
+  color: #f1f1f1;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.2rem;
+}
+
+.task-actions input {
+  transform: scale(1.8);
+  cursor: pointer;
+}
+
+.task-actions button {
+  background-color: #ca1d1d94;
+  color: white;
+  border: none;
+  padding: 0.6rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+
+}
+
+.task-actions button:hover {
+  background-color: #c82333;
+}
+
+
+/* === LIGHT THEME OVERRIDES === */
+.light .task-container {
+  background-color: #ffffff;
+  color: #222;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.light .task-title {
+  color: #222;
+}
+
+.light .task-input {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+  color: #222;
+}
+
+.light .task-input::placeholder {
+  color: #888;
+}
+
+.light .task-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.light .task-button:hover {
+  background-color: #0056b3;
+}
+
+.light .task-item {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.light .task-item:hover {
+  background-color: #e2e2e2;
+}
+
+.light .task-actions button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.light .task-actions button:hover {
+  background-color: #bd2130;
+}

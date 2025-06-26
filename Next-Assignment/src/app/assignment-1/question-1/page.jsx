@@ -1,4 +1,4 @@
-import Greeting from '@/component/greeting'
+import Greeting from '@/component/Greeting'
 import React from 'react'
 
 const Page = () => {
