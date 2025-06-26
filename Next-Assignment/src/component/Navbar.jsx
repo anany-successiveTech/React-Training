@@ -19,6 +19,7 @@ const Navbar = () => {
     router.push(`/assignment-${assignmentNo}`);
   };
 
+
   return (
     <div className="btn-container">
       {[1, 2].map((num) => (
