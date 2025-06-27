@@ -1,16 +1,18 @@
-.input-container{
-    padding: 2rem;
-
+.input-container {
+  padding: 2rem;
 }
-.dark .input-container input{
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: rgb(14, 14, 14);
-    border: none;
+.dark .input-container input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgb(167, 162, 162);
+  border: none;
+  color: #fff;
+  font-size: large;
 }
-.light .input-container input{
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: none;
-    background-color: rgb(238, 238, 238);
+.light .input-container input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: large;
+  background-color: rgb(238, 238, 238);
 }
