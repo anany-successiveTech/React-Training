@@ -1,17 +1,21 @@
-import React from 'react'
+import React from "react";
 
 const Page = () => {
+
+  
+
   return (
     <div>
-            <p style={{ textAlign: "center", margin: "2rem" }}>
-      17. Build a custom hook named useClipboard for copying text to the clipboard.
-Implement a useClipboard hook that takes a text value as a parameter.
-Use the document.execCommand API to copy the provided text to the clipboard.
-Return a success status and methods to trigger the copying action.
-Develop a component that uses the useClipboard hook to provide a copy button for text.
+      <p style={{ textAlign: "center", margin: "2rem" }}>
+        17. Build a custom hook named useClipboard for copying text to the
+        clipboard. Implement a useClipboard hook that takes a text value as a
+        parameter. Use the document.execCommand API to copy the provided text to
+        the clipboard. Return a success status and methods to trigger the
+        copying action. Develop a component that uses the useClipboard hook to
+        provide a copy button for text.
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

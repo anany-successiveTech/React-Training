@@ -1,68 +1,69 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import UseLocalestorage from "@/hooks/UseLocalstirage";
+import React, { useState, useEffect } from "react";
+import Input from "@/component/Input";
+import "@/app/styles/localStorage.css";
 
-const useTimer = (initialDuration = 60) => {
-  const [time, setTime] = useState(initialDuration);
-  const [isRunning, setIsRunning] = useState(false);
-  const intervalRef = useRef(null);
+const MyComponent = () => {
+  const [setValue, removeValue, getStoredValue] = UseLocalestorage("name", "");
+  const [inputValue, setInputValue] = useState("");
+  const [message, setMessage] = useState("");
+  console.log();
 
-  const start = () => {
-    if (intervalRef.current) return;
-    setIsRunning(true);
-    intervalRef.current = setInterval(() => {
-      setTime((prev) => {
-        if (prev <= 1) {
-          clearInterval(intervalRef.current);
-          intervalRef.current = null;
-          setIsRunning(false);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-  };
-
-  const pause = () => {
-    clearInterval(intervalRef.current);
-    intervalRef.current = null;
-    setIsRunning(false);
-  };
-
-  const reset = () => {
-    pause();
-    setTime(initialDuration);
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
   };
 
   useEffect(() => {
-    return () => clearInterval(intervalRef.current);
-  }, []);
+    setTimeout(() => {
+      setMessage("");
+    }, 2000);
+  }, [message]);
 
-  return { time, isRunning, start, pause, reset };
-};
-
-const TimerComponent = () => {
-  const { time, isRunning, start, pause, reset } = useTimer(30); // 30 seconds
+  const handleSet = () => {
+    setValue(inputValue);
+    // setInputValue("")
+    if (inputValue !== "") {
+      setMessage("Data Stored");
+    }
+  
+  };
+  const handleRemove = () => {
+    removeValue();
+    setMessage("Removed Data");
+    // console.log(getStoredValue);
+    // if (getStoredValue === "") {
+    //   removeValue();
+    //   setMessage("Removed Data");
+    // }
+  };
 
   return (
-    <div style={{ textAlign: "center", fontFamily: "Arial" }}>
+    <div>
       <p style={{ textAlign: "center", margin: "2rem" }}>
-        19.Build a custom hook named useTimer for creating countdown timers.
-        Create a useTimer hook that takes a countdown duration as a parameter.
-        Use setInterval to decrement the timer at regular intervals. Return the
-        current timer value and methods to start, pause, and reset the timer.
-        Develop a component that utilizes the useTimer hook to display and
-        control a countdown.
+        18. Design a custom hook named useLocalStorage to interact with local
+        storage. Create a useLocalStorage hook that allows storing and
+        retrieving data from local storage. Implement methods for setting,
+        getting, and removing data using the hook. Utilize the localStorage API
+        within the hook to manage data. Develop a component that uses the
+        useLocalStorage hook to manage user preferences.
       </p>
-      <h2>Countdown: {time} sec</h2>
-      <button onClick={start} disabled={isRunning}>
-        Start
-      </button>
-      <button onClick={pause} disabled={!isRunning}>
-        Pause
-      </button>
-      <button onClick={reset}>Reset</button>
+      <div className="local-container">
+        <h1>{getStoredValue}</h1>
+        <Input
+          type={"text"}
+          placeholder={"Enter the name ... "}
+          value={inputValue}
+          onChange={handleChange}
+        />
+        <div className="btn-container">
+          <button onClick={handleSet}>Set Name</button>
+          <button onClick={handleRemove}>Remove Name</button>
+        </div>
+        <h3>{message}</h3>
+      </div>
     </div>
   );
 };
 
-export default TimerComponent;
+export default MyComponent;
