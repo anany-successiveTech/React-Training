@@ -1,0 +1,125 @@
+/* === Default Styles (light-grey / neutral) === */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  background-color: #202020;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-heading {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.auth-username {
+  font-weight: bold;
+  color: #ece5e5;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #504e4e;
+  color: #000;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: large;
+}
+
+.auth-button:hover {
+  background-color: #0056b3;
+}
+
+.light .auth-card {
+  background-color: #e4e0e0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.light .auth-heading {
+  color: #111;
+}
+
+.light .auth-username {
+  color: #000;
+}
+
+.light .auth-input {
+  background-color: #646262;
+  color: #000;
+}
+
+.light .auth-button {
+ background-color: #4285f4;
+  color: #fff;
+  font-size: large;
+}
+
+.light .auth-button:hover {
+  background-color: #6b6969;
+}
+
+.light input[type="text"] {
+  background-color: #c2bfbf;
+  border: 1px solid #bbb;
+  color: #000;
+}
+
+input[type="text"],
+input[type="password"] {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: #5a5858;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+ input[type="text"],
+input[type="password"] {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: #5a5858;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+}
+.checking{
+  border: 2px solid red;
+}
+.light input[type="text"],
+.light input[type="password"] {
+  background-color: #c2bfbf;
+  border: 1px solid #bbb;
+  color: #000;
+}
+
+}
+
+.light input[type="text"],
+.light input[type="password"] {
+  background-color: #c2bfbf;
+  border: 1px solid #bbb;
+  color: #000;
+}

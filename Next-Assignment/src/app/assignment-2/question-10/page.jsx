@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useContext } from 'react';
-import { LanguageProvider, LanguageContext } from '../../../context/langContext'
-import '../../styles/lang.css'
+import { LanguageProvider, LanguageContext } from '@/context/LanguageProvider'
+import '@/app/styles/lang.css'
 
 const translations = {
   en: {

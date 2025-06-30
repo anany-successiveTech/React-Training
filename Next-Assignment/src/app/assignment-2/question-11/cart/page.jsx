@@ -1,18 +1,25 @@
 "use client";
 
 import React, { useContext } from "react";
-import { CartContext } from "@/context/cartContext";
+import { CartContext } from "@/context/CountProvider";
 import { useRouter } from "next/navigation";
 import "@/app/styles/shoping.css";
 
 const Cart = () => {
   const router = useRouter();
-  const { items, removeProduct, totalPrice, productCount , increaseQuantity, decreaseQuantity} = useContext(CartContext);
+  const {
+    items,
+    removeProduct,
+    totalPrice,
+    productCount,
+    increaseQuantity,
+    decreaseQuantity,
+  } = useContext(CartContext);
 
   if (productCount === 0) {
     return <p className="empty-cart">Your cart is empty.</p>;
   }
-  
+
   return (
     <div className="cart-page">
       <h2>Your Shopping Cart</h2>
@@ -26,7 +33,9 @@ const Cart = () => {
               className="cart-item-image"
             />
             <div className="cart-item-details">
-              <h3>{item.title} x <span>{item.quantity || 1}</span></h3>
+              <h3>
+                {item.title} x <span>{item.quantity || 1}</span>
+              </h3>
               <p>{item.description}</p>
               <p className="price">Rs.{item.price}</p>
               <button
@@ -37,11 +46,14 @@ const Cart = () => {
               </button>
             </div>
             <div className="quantity">
-              <button onClick={() => decreaseQuantity(item)} style={{marginRight:'0.2rem'}}>-</button>
+              <button
+                onClick={() => decreaseQuantity(item)}
+                style={{ marginRight: "0.2rem" }}
+              >
+                -
+              </button>
               <button onClick={() => increaseQuantity(item)}>+</button>
             </div>
-          
-            
           </div>
         ))}
       </div>

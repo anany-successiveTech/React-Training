@@ -8,10 +8,25 @@
   text-align: center;
 }
 
+.dark .salary-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #292828;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
 .salary-container h2 {
   margin-bottom: 20px;
   color: #333;
 }
+.dark .salary-container h2 {
+  margin-bottom: 20px;
+  color: #f3ebeb;
+}
+
 
 .salary-container button {
   padding: 10px 15px;

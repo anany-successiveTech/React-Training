@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-const UseLocalestorage = (key, initialValue) => {
+const useLocalestorage = (key, initialValue) => {
   const getStoredValue = () => {
     try {
       const item = localStorage.getItem(key);
+    //   console.log(item, "ksjbvkjbskjrbksjb");
+      
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
       console.error(`Key not found: ${(key, error)}`);
@@ -30,4 +32,7 @@ const UseLocalestorage = (key, initialValue) => {
   return [setValue, removeValue, getStoredValue];
 };
 
-export default UseLocalestorage;
+export default useLocalestorage;
+
+// 1. Here we are making 3 functions "removeValue, getStoredValue, setValue".
+// 2. Exporting these function in an array and we will import all od the methods in our Component.

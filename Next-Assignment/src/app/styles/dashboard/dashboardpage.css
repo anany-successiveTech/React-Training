@@ -1,0 +1,173 @@
+.dashboard {
+  width: 500px;
+  text-align: center;
+  align-self: center;
+  font-size: large;
+}
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+}
+.subpage-link {
+  font-size: 1rem;
+  color: #89b4fa;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+}
+.light .subpage-link {
+  color: #0070f3;
+}
+.dashboard-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-box {
+  width: 500px;
+  text-align: center;
+  font-size: large;
+}
+
+.dashboard-heading {
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.subpage-link {
+  font-size:larger;
+  color: #89b4fa;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.light .subpage-link {
+  color: #0070f3;
+}
+.profile-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.profile-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+.profile-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #89b4fa;
+  text-decoration: none;
+  font-weight: 500;
+}
+.back-link span{
+    margin-right: 0.5rem;
+}
+
+/* setting page styling */
+.setting-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  color: #ddd;
+}
+
+.setting-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f0f0f0;
+}
+
+.setting-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #bbb;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #89b4fa;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* === Light Mode === */
+.light .setting-container {
+  color: #222;
+}
+
+.light .setting-heading {
+  color: #111;
+}
+
+.light .setting-text {
+  color: #444;
+}
+
+.light .back-link {
+  color: #0070f3;
+}
+.profile-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  color: #ddd;
+}
+
+.profile-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f0f0f0;
+}
+
+.profile-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #bbb;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #89b4fa;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* === Light Mode === */
+.light .profile-container {
+  color: #222;
+}
+
+.light .profile-heading {
+  color: #111;
+}
+
+.light .profile-text {
+  color: #444;
+}
+
+.light .back-link {
+  color: #0070f3;
+}

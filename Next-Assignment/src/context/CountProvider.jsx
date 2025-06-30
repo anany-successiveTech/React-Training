@@ -18,6 +18,8 @@ export const CountProvider = ({ children }) => {
   // Add product or increase quantity if already in cart
   const addProduct = (product) => {
     const itemInCart = items.find((item) => item.id === product.id);
+if(itemInCart) return;
+    // console.log(product, "product");
 
     if (itemInCart) {
       increaseQuantity(product);

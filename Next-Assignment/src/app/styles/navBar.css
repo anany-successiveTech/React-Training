@@ -1,0 +1,61 @@
+/* === Theme Toggle Styles === */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  margin: 0rem 1.2rem;
+}
+
+.theme-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-count{
+  margin: 0rem 0rem 0.6rem 1rem;
+}
+.theme-icon-light,
+.theme-icon-dark {
+  font-size: 1.5rem;
+  display: block;
+}
+
+/* === Cart Styles === */
+.navbar-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 1.2rem;
+  /* border: 1px solid red; */
+}
+
+.navbar-cart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 0.4rem;
+  color: inherit;
+  line-height: 1;
+  vertical-align: middle;
+  padding: 0;
+  height: 100%;
+}
+
+.navbar-cart-button i {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.icon-container{
+  display: flex;
+  margin-bottom: 0.8rem;
+}

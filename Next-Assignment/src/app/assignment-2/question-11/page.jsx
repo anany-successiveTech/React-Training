@@ -1,6 +1,6 @@
 "use client";
 import React, { useContext } from "react";
-import { CartContext } from "@/context/cartContext";
+import { CartContext } from "@/context/CountProvider";
 import "@/app/styles/shoping.css";
 
 const products = [
@@ -64,12 +64,18 @@ const Page = () => {
       <div className="products-list">
         {products.map((PorductItem) => (
           <div key={PorductItem.id} className="product-card">
-            <img src={PorductItem.image} alt={PorductItem.title} className="product-image" />
+            <img
+              src={PorductItem.image}
+              alt={PorductItem.title}
+              className="product-image"
+            />
             <div className="product-details">
               <h3>{PorductItem.title}</h3>
               <p>{PorductItem.description}</p>
               <p className="price">Rs.{PorductItem.price}</p>
-              <button onClick={() => addProduct(PorductItem)}>Add to Cart</button>
+              <button onClick={() => addProduct(PorductItem)}>
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}

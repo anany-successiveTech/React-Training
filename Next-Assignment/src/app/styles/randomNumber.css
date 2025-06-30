@@ -36,13 +36,16 @@
     font-size: large;
     border-radius: 0.5rem;
     border: none;
+    background-color: rgb(44, 43, 43);
+    color: #fff;
 }
 .light .generator-btn button{
     padding: 1rem;
     font-size: large;
     border-radius: 0.5rem;
-    background-color: aliceblue;
+    background-color: rgb(195, 198, 201);
     border: none;
+    color: #000;
 }
 .generator-btn button:hover{
     background-color: #4285F4;

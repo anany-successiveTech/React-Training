@@ -1,41 +1,39 @@
 "use client";
-import UseLocalestorage from "@/hooks/UseLocalstirage";
+import UseLocalestorage from "@/hooks/useLocaleStorage";
 import React, { useState, useEffect } from "react";
 import Input from "@/component/Input";
-import "@/app/styles/localStorage.css";
+import "@/app/styles/localeStorage.css";
 
 const MyComponent = () => {
-  const [setValue, removeValue, getStoredValue] = UseLocalestorage("name", "");
+  const [setValue, removeValue, getStoredValue] = UseLocalestorage(
+    "name",
+    "random"
+  );
   const [inputValue, setInputValue] = useState("");
   const [message, setMessage] = useState("");
-  console.log();
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
+  // console.log("the value", getStoredValue);
 
   useEffect(() => {
     setTimeout(() => {
       setMessage("");
-    }, 2000);
+    }, 3000);
   }, [message]);
 
   const handleSet = () => {
-    setValue(inputValue);
-    // setInputValue("")
     if (inputValue !== "") {
+      setValue(inputValue);
       setMessage("Data Stored");
+    } else {
+      alert("Please enter something");
     }
-  
   };
   const handleRemove = () => {
     removeValue();
     setMessage("Removed Data");
-    // console.log(getStoredValue);
-    // if (getStoredValue === "") {
-    //   removeValue();
-    //   setMessage("Removed Data");
-    // }
   };
 
   return (
@@ -49,7 +47,6 @@ const MyComponent = () => {
         useLocalStorage hook to manage user preferences.
       </p>
       <div className="local-container">
-        <h1>{getStoredValue}</h1>
         <Input
           type={"text"}
           placeholder={"Enter the name ... "}
@@ -57,8 +54,12 @@ const MyComponent = () => {
           onChange={handleChange}
         />
         <div className="btn-container">
-          <button onClick={handleSet}>Set Name</button>
-          <button onClick={handleRemove}>Remove Name</button>
+          <button onClick={handleSet} className="set-btn">
+            Set Name
+          </button>
+          <button onClick={handleRemove} className="set-btn">
+            Remove Name
+          </button>
         </div>
         <h3>{message}</h3>
       </div>
