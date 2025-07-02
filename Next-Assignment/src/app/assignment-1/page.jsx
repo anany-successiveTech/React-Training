@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const page = () => {
+const Page = () => {
   return (
-    <div>
-
+    <div style={{ textAlign: 'center' }}>
+      <h1>Assignment-1</h1>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

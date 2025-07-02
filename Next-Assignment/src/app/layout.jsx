@@ -1,12 +1,12 @@
 "use client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import Navbar from "@/component/Navbar";
-import NavbarDrawer from "@/component/Navbar";
+import '@/component/SideBar'
 import '@/app/styles/body.css'
 import { ThemeContext, ThemeProvider } from "@/context/ThemeProvider";
 import { useContext } from "react";
 import { CountProvider } from "@/context/CountProvider";
+import NavbarDrawer from "@/component/SideBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +43,7 @@ export default function RootLayout({ children }) {
           <CountProvider>
             {/* <Navbar /> */}
             <NavbarDrawer/>
+            {/* <Sidebar/> */}
             <div className="app-layout">
               <main className="main-content home-body">{children}</main>
             </div>
