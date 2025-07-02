@@ -3,7 +3,7 @@ import React from "react";
 const Page = () => {
   return (
     <div>
-      <p style={{ textAlign: "center", margin: "2rem", fontSize: "x-large" }}>
+      <p style={{ textAlign: "center", margin: "2rem", fontSize: "large" }}>
         2. Extend the previous application to demonstrate the use of nested
         contexts. Create a new context to manage user preferences (e.g., theme
         preference). Modify the parent component to provide both the

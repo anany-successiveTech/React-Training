@@ -1,0 +1,33 @@
+.temp-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #353434;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.light .temp-container {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.temp-title {
+  margin-bottom: 1.5rem;
+}
+
+.temp-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.temp-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}

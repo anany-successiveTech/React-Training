@@ -32,6 +32,8 @@ const EmployeeSalary = () => {
   };
 
   const handleSalaryChange = (event) => {
+    console.log(event.target.value);
+    
     const increment = parseFloat(event.target.value);
     setNewSalary(increment);
   };
@@ -51,8 +53,8 @@ const EmployeeSalary = () => {
       <div className="salary-container">
         <h2>Average Salary: Rs.{averageSalary}</h2>
         <Input
-          type="text"
-          placeholder="Enter salary increment..."
+          type={'text'}
+          placeholder={'Enter increament....'}
           onChange={handleSalaryChange}
         />
         <button onClick={updateSalaries}>Increament</button>

@@ -1,0 +1,94 @@
+/* Container for the entire page */
+.search-page {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  color: #f1f1f1;
+}
+
+/* Light mode support */
+.light .search-page {
+  color: #111;
+}
+
+/* Instructions paragraph */
+.search-instructions {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 16px;
+}
+
+/* Input wrapper */
+.finder {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.finder input{
+ border: none;
+ color: #636060;
+ width: 400px;
+ background-color: rgb(37, 37, 37);
+
+}
+.light .finder input{
+ color: #201f1f;
+ background-color: rgb(233, 231, 231);
+}
+.finder input::placeholder{
+ border: none;
+ color: #dad0d0;
+}
+.light .finder input::placeholder{
+ color: #1a1818;
+}
+
+/* Container for search results */
+.searched-result-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Product card */
+.product-card {
+  width: 200px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #302f2f;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+/* Light mode card background */
+.light .product-card {
+  background-color: #e0e0e0;
+  color: #000;
+}
+/* Product image */
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit:fill ;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+/* Product title */
+.product-card h4 {
+  margin: 0.5rem 0 0.3rem;
+  font-size: 16px;
+}
+
+/* Product description */
+.product-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  font-weight: bold;
+  color: #ff9999;
+}

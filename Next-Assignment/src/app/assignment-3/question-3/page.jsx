@@ -18,7 +18,7 @@ const Page = () => {
         "redirectAfterLogin",
         "/assignment-3/question-3/about"
       );
-      router.push("/assignment-3/question-1"); // login page
+      router.push("/assignment-3/question-1");
     }
     router.push("/assignment-3/question-3/about");
   };
