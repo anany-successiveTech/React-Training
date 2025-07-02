@@ -1,6 +1,5 @@
 "use client";
 
-import Input from "@/component/Input";
 import React, { useState } from "react";
 import "@/app/styles/assign-4.css";
 

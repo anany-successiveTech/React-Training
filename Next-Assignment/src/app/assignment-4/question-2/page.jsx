@@ -47,17 +47,19 @@ const SimpleForm = () => {
           </label>
         </div>
 
-        <div style={{ marginBottom: 12 }}>
-          <label>
-            <input
-              type="checkbox"
-              name="agree"
-              checked={formData.agree}
-              onChange={handleChange}
-            />{" "}
-            I agree to the terms
-          </label>
-        </div>
+      <div style={{ marginBottom: 12 }}>
+        <label>
+          <input
+            type="checkbox"
+            name="agree"
+            checked={formData.agree}
+            onChange={handleChange}
+          />{" "}
+          I agree to the terms'use client'
+
+import React from "react";
+        </label>
+      </div>
 
         <div style={{ marginBottom: 12 }}>
           Gender: <br />

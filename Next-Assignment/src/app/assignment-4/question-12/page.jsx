@@ -12,7 +12,7 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import { ThemeProvider, useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 
 const users = [
   { id: 1, name: "Alice", age: 25, email: "alice@example.com" },
@@ -42,9 +42,8 @@ const users = [
   { id: 25, name: "Yara", age: 30, email: "yara@example.com" },
 ];
 
-export default function EasyTable() {
+const EasyTable = () => {
   const theme = useTheme();
-
   const [orderBy, setOrderBy] = useState("name");
   const [order, setOrder] = useState("asc");
   const [page, setPage] = useState(0);
@@ -59,6 +58,7 @@ export default function EasyTable() {
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
+
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
@@ -76,19 +76,19 @@ export default function EasyTable() {
   );
 
   return (
-    
     <div>
       <p style={{ textAlign: "center", margin: "2rem" }}>
         12. Build a data table using Material-UI's Table component. Populate the
         table with sample data and add features like sorting and pagination.
       </p>
+
       <Paper
         sx={{
           width: "90%",
           margin: "auto",
           marginTop: theme.spacing(4),
           overflow: "hidden",
-          bgcolor: theme.palette.background.paper, 
+          bgcolor: theme.palette.background.paper,
           color: theme.palette.text.primary,
         }}
       >
@@ -101,7 +101,7 @@ export default function EasyTable() {
         </Typography>
 
         <TableContainer>
-          <Table stickyHeader aria-label="sticky table">
+          <Table stickyHeader>
             <TableHead>
               <TableRow>
                 {["name", "age", "email"].map((headCell) => (
@@ -147,11 +147,12 @@ export default function EasyTable() {
           count={users.length}
           rowsPerPage={rowsPerPage}
           page={page}
-          onPageChange={handleChangePage} // Updated signature per MUI docs
+          onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
     </div>
-   
   );
-}
+};
+
+export default EasyTable;

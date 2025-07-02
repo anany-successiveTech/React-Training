@@ -1,9 +1,11 @@
+import React from 'react';
 
-export default function Home() {
-
+const Page = () => {
   return (
-    <div className="main-home-body">
- 
+    <div style={{ textAlign: 'center' }}>
+      <h1>Welcom to the Next.Js Training's Assignment-App</h1>
     </div>
   );
-}
+};
+
+export default Page;

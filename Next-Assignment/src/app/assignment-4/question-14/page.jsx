@@ -13,6 +13,7 @@ import {
   ListItem,
 } from "@mui/material";
 
+// Yup validation schema for checking the entered input values from the user.
 const validationSchema = Yup.object({
   email: Yup.string()
     .email("Invalid email format")
@@ -51,12 +52,11 @@ const FormikTextField = ({ name, label, type = "text" }) => (
   </Field>
 );
 
-export default function SubmitForm() {
+const SubmitForm = () => {
   const [submitErrors, setSubmitErrors] = useState([]);
 
   return (
     <div>
-      {" "}
       <p style={{ textAlign: "center", margin: "2rem" }}>
         14. Create a new form and Implement form submission handling. Ensure that
         the form cannot be submitted if there are validation errors. Display a
@@ -95,13 +95,15 @@ export default function SubmitForm() {
 
               if (Object.keys(formErrors).length > 0) {
                 setSubmitErrors(Object.values(formErrors));
+              } else {
+                setSubmitErrors([]);
+                handleSubmit();
               }
-              setSubmitErrors([]);
-              handleSubmit();
             };
 
             return (
               <Form noValidate onSubmit={handleFormSubmit}>
+                {/* Showing summary of errors on submit attempt */}
                 {submitErrors.length > 0 && (
                   <Alert severity="error" sx={{ mb: 2 }}>
                     <Typography variant="subtitle1">
@@ -118,11 +120,7 @@ export default function SubmitForm() {
                 )}
 
                 <FormikTextField name="email" label="Email" />
-                <FormikTextField
-                  name="password"
-                  label="Password"
-                  type="password"
-                />
+                <FormikTextField name="password" label="Password" type="password" />
                 <FormikTextField name="phone" label="Phone Number" />
 
                 <Button
@@ -141,4 +139,6 @@ export default function SubmitForm() {
       </Box>
     </div>
   );
-}
+};
+
+export default SubmitForm;

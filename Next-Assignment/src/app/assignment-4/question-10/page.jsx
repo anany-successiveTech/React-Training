@@ -22,6 +22,64 @@ const FormWithValidation = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [touched, setTouched] = useState({});
+
+  // Validation rules fro input fileds.
+  const validateField = (name, value) => {
+    switch (name) {
+      case "firstName":
+        if (!value.trim()) return "First name is required";
+        if (value.length < 2) return "First name must be at least 2 characters";
+        if (!/^[a-zA-Z\s]+$/.test(value))
+          return "First name can only contain letters";
+        return "";
+
+      case "lastName":
+        if (!value.trim()) return "Last name is required";
+        if (value.length < 2) return "Last name must be at least 2 characters";
+        if (!/^[a-zA-Z\s]+$/.test(value))
+          return "Last name can only contain letters";
+        return "";
+
+      case "email":
+        if (!value.trim()) return "Email is required";
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value))
+          return "Please enter a valid email address";
+        return "";
+
+      case "phone":
+        if (!value.trim()) return "Phone number is required";
+        const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if (!phoneRegex.test(value))
+          return "Please enter a valid phone number (e.g., 123-456-7890)";
+        return "";
+
+      case "password":
+        if (!value) return "Password is required";
+        if (value.length < 8) return "Password must be at least 8 characters";
+        if (!/(?=.*[a-z])/.test(value))
+          return "Password must contain at least one lowercase letter";
+        if (!/(?=.*[A-Z])/.test(value))
+          return "Password must contain at least one uppercase letter";
+        if (!/(?=.*\d)/.test(value))
+          return "Password must contain at least one number";
+        if (!/(?=.*[@$!%*?&])/.test(value))
+          return "Password must contain at least one special character";
+        return "";
+
+      case "confirmPassword":
+        if (!value) return "Please confirm your password";
+        if (value !== formData.password) return "Passwords do not match";
+        return "";
+
+      default:
+        return "";
+    }
+  };
 
   const validate = () => {
     const newErrors = {};

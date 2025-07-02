@@ -108,7 +108,6 @@ const NavbarDrawer = () => {
     2: 19,
     3: 6,
     4: 14,
-    5: 12,
   };
 
   const handleAssignmentClick = (assignmentNo) => {

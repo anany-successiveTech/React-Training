@@ -49,6 +49,7 @@ const FormikTextField = ({ name, label, type = "text" }) => (
 
 export default function ComplexForm() {
   return (
+<<<<<<< HEAD
     <div>
       <p style={{ textAlign: "center", margin: "2rem" }}>
         13. Install Yup. Define a Yup validation schema for a more complex form.
@@ -66,6 +67,22 @@ export default function ComplexForm() {
           p: 3,
           border: "1px solid #ccc",
           borderRadius: 2,
+=======
+    <Box sx={{ maxWidth: 400, mx: 'auto', mt: 5, p: 3, border: '1px solid #ccc', borderRadius: 2 }}>
+      <Typography variant="h5" mb={3}>
+        Register
+      </Typography>
+
+      <Formik
+        initialValues={{ email: '', password: '', phone: '' }}
+        validationSchema={validationSchema}
+        validateOnChange={false} 
+        validateOnBlur={true}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+          resetForm();
+>>>>>>> c2c0009a0c71dfc45f5bb3ea73f02bba6afe59ec
         }}
       >
         <Typography variant="h5" mb={3}>
