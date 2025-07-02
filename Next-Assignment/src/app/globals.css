@@ -1,9 +1,9 @@
-.light{
+.light {
   background-color: white;
   color: black;
 }
 
-.dark{
+.dark {
   background-color: black;
   color: white;
 }
@@ -28,6 +28,6 @@ a {
   text-decoration: none;
 }
 
-.darkButton{
+.darkButton {
   background-color: transparent;
 }

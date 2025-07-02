@@ -2,8 +2,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import Navbar from "@/component/Navbar";
-import NavbarDrawer from "@/component/Navbar";
-import '@/app/styles/body.css'
+import NavbarDrawer from "@/component/SideBar";
+import "@/app/styles/body.css";
 import { ThemeContext, ThemeProvider } from "@/context/ThemeProvider";
 import { useContext } from "react";
 import { CountProvider } from "@/context/CountProvider";
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
         >
           <CountProvider>
             {/* <Navbar /> */}
-            <NavbarDrawer/>
+            <NavbarDrawer />
             <div className="app-layout">
               <main className="main-content home-body">{children}</main>
             </div>

@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import '@/app/styles/formShow.css'
-
+import "@/app/styles/formShow.css";
 
 const SimpleForm = () => {
   const [formData, setFormData] = useState({
@@ -26,63 +25,69 @@ const SimpleForm = () => {
 
   return (
     <div>
-    <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: "auto" }}>
-      <div style={{ marginBottom: 12 }}>
-        <label>
-          Name: <br />
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-            required
-            style={{ width: "100%", padding: 8 }}
-          />
-        </label>
-      </div>
+      <p style={{ textAlign: "center", margin: "2rem" }}>
+        2. Build a form that includes various input fields like text inputs,
+        checkboxes, and radio buttons. Ensure that each input is a controlled
+        component. When the user submits the form, log the form data to the
+        console.{" "}
+      </p>
+      <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: "auto" }}>
+        <div style={{ marginBottom: 12 }}>
+          <label>
+            Name: <br />
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Enter your name"
+              required
+              style={{ width: "100%", padding: 8 }}
+            />
+          </label>
+        </div>
 
-      <div style={{ marginBottom: 12 }}>
-        <label>
-          <input
-            type="checkbox"
-            name="agree"
-            checked={formData.agree}
-            onChange={handleChange}
-          />{" "}
-          I agree to the terms
-        </label>
-      </div>
+        <div style={{ marginBottom: 12 }}>
+          <label>
+            <input
+              type="checkbox"
+              name="agree"
+              checked={formData.agree}
+              onChange={handleChange}
+            />{" "}
+            I agree to the terms
+          </label>
+        </div>
 
-      <div style={{ marginBottom: 12 }}>
-        Gender: <br />
-        <label>
-          <input
-            type="radio"
-            name="gender"
-            value="male"
-            checked={formData.gender === "male"}
-            onChange={handleChange}
-          />{" "}
-          Male
-        </label>{" "}
-        <label>
-          <input
-            type="radio"
-            name="gender"
-            value="female"
-            checked={formData.gender === "female"}
-            onChange={handleChange}
-          />{" "}
-          Female
-        </label>
-      </div>
+        <div style={{ marginBottom: 12 }}>
+          Gender: <br />
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              checked={formData.gender === "male"}
+              onChange={handleChange}
+            />{" "}
+            Male
+          </label>{" "}
+          <label>
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              checked={formData.gender === "female"}
+              onChange={handleChange}
+            />{" "}
+            Female
+          </label>
+        </div>
 
-      <button type="submit" style={{ padding: "8px 16px" }}>
-        Submit
-      </button>
-    </form>
+        <button type="submit" style={{ padding: "8px 16px" }}>
+          Submit
+        </button>
+      </form>
     </div>
   );
-}
-export default SimpleForm
+};
+export default SimpleForm;

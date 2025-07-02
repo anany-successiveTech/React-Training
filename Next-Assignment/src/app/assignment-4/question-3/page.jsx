@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import "@/app/styles/a4q3.css";
+import { Input } from "@mui/material";
 
 const Message = () => {
   return <p className="message">✅ Hello! You typed "show" 👋</p>;
@@ -29,7 +30,7 @@ const ShowComponent = () => {
       </p>
       <div className="container">
         <h3 className="title">Type "show" to see the message</h3>
-        <input
+        <Input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
