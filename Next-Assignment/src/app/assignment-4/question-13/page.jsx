@@ -57,7 +57,7 @@ export default function ComplexForm() {
       <Formik
         initialValues={{ email: '', password: '', phone: '' }}
         validationSchema={validationSchema}
-        validateOnChange={false} // We'll manually trigger validation on change
+        validateOnChange={false} 
         validateOnBlur={true}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           alert(JSON.stringify(values, null, 2));

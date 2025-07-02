@@ -123,14 +123,14 @@ export default function EnhancedTable() {
         </Table>
       </TableContainer>
 
-      {/* Correct TablePagination usage */}
+      
       <TablePagination
         rowsPerPageOptions={[5, 10, 25]}
         component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}
         page={page}
-        onPageChange={handleChangePage}           // Note: MUI v5 uses this signature
+        onPageChange={handleChangePage}           
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
     </Paper>

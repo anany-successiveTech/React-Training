@@ -50,7 +50,9 @@ const SimpleForm = () => {
             checked={formData.agree}
             onChange={handleChange}
           />{" "}
-          I agree to the terms
+          I agree to the terms'use client'
+
+import React from "react";
         </label>
       </div>
 

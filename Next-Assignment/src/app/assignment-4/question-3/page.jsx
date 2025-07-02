@@ -5,7 +5,7 @@ import "@/app/styles/a4q3.css";
 
 const Message = () => {
   return <p className="message">✅ Hello! You typed "show" 👋</p>;
-}
+};
 
 const ShowComponent = () => {
   const [inputValue, setInputValue] = useState("");
@@ -14,11 +14,10 @@ const ShowComponent = () => {
   const handleButtonClick = () => {
     if (inputValue === "show") {
       setShow(true);
-    } else {
-      setShow(false);
     }
+    setShow(false);
   };
- 
+
   return (
     <div>
       <p style={{ textAlign: "center", margin: "2rem" }}>
@@ -44,6 +43,6 @@ const ShowComponent = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ShowComponent;

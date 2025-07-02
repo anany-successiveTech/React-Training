@@ -5,7 +5,7 @@ import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { TextField, Button, Box, Typography, Alert, List, ListItem } from '@mui/material';
 
-// Yup validation schema
+// Yup validation schema doing for checking the entered input values from the user.
 const validationSchema = Yup.object({
   email: Yup.string()
     .email('Invalid email format')
@@ -66,7 +66,7 @@ export default function SubmitForm() {
             const formErrors = await validateForm();
 
             if (Object.keys(formErrors).length > 0) {
-              // Collect all error messages
+            
               setSubmitErrors(Object.values(formErrors));
             } else {
               setSubmitErrors([]);
@@ -76,7 +76,7 @@ export default function SubmitForm() {
 
           return (
             <Form noValidate onSubmit={handleFormSubmit}>
-              {/* Show summary of errors on submit attempt */}
+              {/* Showing summary of errors on submit attempt */}
               {submitErrors.length > 0 && (
                 <Alert severity="error" sx={{ mb: 2 }}>
                   <Typography variant="subtitle1">Please fix these errors:</Typography>

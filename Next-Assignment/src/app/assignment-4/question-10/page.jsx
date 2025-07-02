@@ -26,7 +26,7 @@ const FormValidationChallenge = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [touched, setTouched] = useState({});
 
-  // Validation rules
+  // Validation rules fro input fileds.
   const validateField = (name, value) => {
     switch (name) {
       case "firstName":
