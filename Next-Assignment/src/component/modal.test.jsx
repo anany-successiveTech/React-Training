@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import ModalDemo from "./ModalDemo";
+import ModalDemo from "./modalDemo.jsx";
+
 
 describe("Modal Component", () => {
   it("should open and close the modal correctly", async () => {

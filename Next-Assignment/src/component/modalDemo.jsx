@@ -1,17 +1,18 @@
+// src/component/ModalDemo.jsx
 import React, { useState } from "react";
-import Modal from "./Modal";
+import Modal from "./modal.jsx";
 
 const ModalDemo = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
-      <button data-testid="open-button" onClick={() => setIsOpen(true)}>
+      <button onClick={() => setIsOpen(true)} data-testid="open-button">
         Open Modal
       </button>
 
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <p>This is the modal content</p>
+        This is the modal content
       </Modal>
     </div>
   );
