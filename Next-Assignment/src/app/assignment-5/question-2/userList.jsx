@@ -13,8 +13,11 @@ export default function UserList({ initialUsers, initialError }) {
     setError(null);
     try {
       const res = await fetch('https://jsonplaceholder.typicode.com/users');
+      // console.log(res);
+      
       if (!res.ok) throw new Error();
       const data = await res.json();
+      // console.log(res);
       setUsers(data);
     } catch {
       setError('Failed to load users. Please try again.');
