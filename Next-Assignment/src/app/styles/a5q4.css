@@ -1,0 +1,85 @@
+/* paginatedList.css */
+
+/* Dark Theme (default) */
+.posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  font-family: Arial, sans-serif;
+  color: #ccc;
+
+}
+.pages{
+ border: 3px solid red;
+ height: 70vh;
+}
+.post-item {
+  background: #222;
+  border: 1px solid #444;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  background: #121212;
+  color: #ccc;
+  border: 1px solid #666;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background: #bb86fc;
+  color: #121212;
+  border-color: #bb86fc;
+  font-weight: bold;
+}
+
+.pagination button:hover:not(:disabled):not(.active) {
+  background: #333;
+}
+
+/* Light Theme (when .light is parent) */
+.light .posts-list {
+  color: #222;
+}
+
+.light .post-item {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.light .pagination button {
+  background: #fff;
+  color: #222;
+  border: 1px solid #aaa;
+}
+
+.light .pagination button:disabled {
+  opacity: 0.5;
+}
+
+.light .pagination button.active {
+  background: #0070f3;
+  color: white;
+  border-color: #0070f3;
+}
+
+.light .pagination button:hover:not(:disabled):not(.active) {
+  background: #e6f0ff;
+}

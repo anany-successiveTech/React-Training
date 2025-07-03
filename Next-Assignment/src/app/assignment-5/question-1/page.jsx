@@ -14,20 +14,27 @@ const PostsPage = () => {
 
   useEffect(() => {
     getPosts();
-  },[]);
+  }, []);
 
   return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Blog Posts (Server-Side Rendered)</h1>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {posts.map((post) => (
-          <li key={post.id} style={{ marginBottom: "1.5rem" }}>
-            <h3>{post.title}</h3>
-            <p>{post.body}</p>
-          </li>
-        ))}
-      </ul>
-    </main>
+    <div>
+      <p style={{ textAlign: "center", margin: "2rem" }}>
+        1. Create a Next.js component using the App Router that fetches data on
+        the server side (SSR) from a public API (e.g., JSONPlaceholder) and
+        displays the results on the page.
+      </p>
+      <main style={{ padding: "2rem" }}>
+        <h1>Blog Posts (Server-Side Rendered)</h1>
+        <ul style={{ listStyle: "none", padding: 0 }}>
+          {posts.map((post) => (
+            <li key={post.id} style={{ marginBottom: "1.5rem" }}>
+              <h3>{post.title}</h3>
+              <p>{post.body}</p>
+            </li>
+          ))}
+        </ul>
+      </main>
+    </div>
   );
 };
 

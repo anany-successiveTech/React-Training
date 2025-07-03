@@ -1,0 +1,87 @@
+/* Default Dark Theme */
+.a7q7-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #121212;
+  color: #eee;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.a7q7-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #bb86fc;
+}
+
+.a7q7-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.a7q7-form label {
+  margin: 0.5rem 0 0.2rem;
+}
+
+.a7q7-form input,
+.a7q7-form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.a7q7-form button {
+  padding: 0.6rem;
+  background-color: #bb86fc;
+  border: none;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.a7q7-form button:hover {
+  background-color: #985eff;
+}
+
+.a7q7-success {
+  color: #4caf50;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.a7q7-error {
+  color: #f44336;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Light Theme */
+.light .a7q7-form-container {
+  background-color: #fff;
+  color: #222;
+}
+
+.light .a7q7-title {
+  color: #6200ee;
+}
+
+.light .a7q7-form input,
+.light .a7q7-form textarea {
+  background-color: #f9f9f9;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.light .a7q7-form button {
+  background-color: #6200ee;
+  color: #fff;
+}
+
+.light .a7q7-form button:hover {
+  background-color: #3700b3;
+}
