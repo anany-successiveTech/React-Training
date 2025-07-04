@@ -1,0 +1,43 @@
+.header {
+  margin-bottom: 2rem;
+}
+.header h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.game-container .first {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.main-container {
+  height: 60vh;
+}
+.first button {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+  margin: 0.2rem;
+  text-align: center;
+  font-size: xx-large;
+  border: none;
+  border-radius: 0.4rem;
+  align-self: center;
+}
+.controles {
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding: 1rem;
+}
+.controles button {
+  padding: 0.8rem 1rem;
+  font-size: large;
+  border: none;
+  border-radius: 0.4rem;
+}
+.controles button:hover {
+  background-color: #4285f4;
+  color: #fff;
+}

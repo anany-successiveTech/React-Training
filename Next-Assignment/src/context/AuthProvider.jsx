@@ -28,16 +28,11 @@ export const AuthProvider = ({ children }) => {
     try {
       const storedUser = JSON.parse(localStorage.getItem("registeredUser"));
 
-      // console.log(storedUser);
-      // console.log(storedUser.username, storedUser.password);
-      
       if (
         storedUser &&
         username === storedUser.username &&
         password === storedUser.password
       ) {
-        // console.log(username, "username");
-        
         setUser({ username });
         setError(null);
         console.log("Login successful:", username);

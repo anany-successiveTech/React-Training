@@ -20,7 +20,7 @@ const Page = () => {
       );
       router.push("/assignment-3/question-1");
     }
-    router.push("/assignment-3/question-3/about");
+    else {router.push("/assignment-3/question-3/about");}
   };
 
   return (

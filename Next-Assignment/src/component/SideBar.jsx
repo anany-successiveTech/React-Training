@@ -42,7 +42,7 @@ const NavbarDrawer = () => {
     3: 6,
     4: 14,
     5: 12,
-    6: 1
+    6: 1,
   };
 
   const handleAssignmentClick = (assignmentNo) => {
@@ -77,6 +77,8 @@ const NavbarDrawer = () => {
           </Typography>
 
           {/* Cart Button */}
+
+          <button onClick={() => router.push("/assessment")} style={{padding:"0.2rem 0.5rem", margin:"0rem 0.5rem", fontSize:"large"}}>Assessment</button>
           <IconButton
             onClick={() => router.push("/assignment-2/question-11/cart")}
             sx={{ position: "relative", mr: 1 }}
@@ -206,6 +208,5 @@ const NavbarDrawer = () => {
     </Box>
   );
 };
-
 
 export default NavbarDrawer;
