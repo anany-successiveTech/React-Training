@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from "react";
-import '../../styles/slideShow.css'
+import "@/app/styles/slideShow.css"
 
 const Page = () => {
   const images = [

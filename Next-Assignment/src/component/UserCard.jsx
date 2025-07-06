@@ -1,7 +1,5 @@
-// src/components/UserCard/UserCard.jsx
-
 import React from "react";
-import "../app/styles/userCard.css";
+import "@/app/styles/userCard.css";
 
 const UserCard = ({ name, email, imageUrl }) => {
   return (
@@ -17,9 +15,7 @@ const UserCard = ({ name, email, imageUrl }) => {
 
 export default UserCard;
 
-
 // Example explorer comentaed code
-
 
 // app
 // /assignment-1/

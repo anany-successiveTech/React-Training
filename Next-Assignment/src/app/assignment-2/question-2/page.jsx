@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Input from "../../../component/Input";
-import "../../styles/form.css";
+import Input from "@/component/Input"
+import "@/app/styles/form.css"
 
 const Page = () => {
   const [firstName, setFirstName] = useState("");
