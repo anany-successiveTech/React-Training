@@ -1,12 +1,7 @@
-// 2.Create a functional component named UserCard that accepts the following props: name, email, and avatarURL.
-// Use the props to display the user's name, email, and an image (avatar) in the UserCard component.
-// Create multiple instances of the UserCard component with different user data.
-
-import React, { use } from "react";
 import UserCard from "@/component/userCard";
 import "@/app/styles/home.css";
 
-const User = () => {
+const Page = () => {
   const users = [
     {
       name: "Anany More",
@@ -55,4 +50,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default Page;
