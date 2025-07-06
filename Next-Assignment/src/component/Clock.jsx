@@ -1,5 +1,5 @@
 "use client";
-import '../app/styles/clock.css'
+import "@/app/styles/clock.css"
 import React, { useState, useEffect } from 'react';
 
 const Clock = () => {

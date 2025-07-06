@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '../app/styles/home.css'
+import "@/app/styles/home.css"
 
 const Button = ({ name, value, onclick, active}) => {
   return (

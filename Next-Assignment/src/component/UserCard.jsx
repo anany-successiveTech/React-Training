@@ -1,7 +1,6 @@
-// src/components/UserCard/UserCard.jsx
 
 import React from "react";
-import "../app/styles/userCard.css";
+import "@/app/styles/userCard.css"
 
 const UserCard = ({ name, email, imageUrl }) => {
   return (
