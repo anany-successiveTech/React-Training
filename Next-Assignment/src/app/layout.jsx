@@ -7,6 +7,7 @@ import { ThemeContext, ThemeProvider } from "@/context/ThemeProvider";
 import { useContext } from "react";
 import { CountProvider } from "@/context/CountProvider";
 import NavbarDrawer from "@/component/SideBar";
+import { AuthProvider } from "@/context/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,12 +42,13 @@ export default function RootLayout({ children }) {
           className={`${geistSans.variable} ${geistMono.variable} font-sans `}
         >
           <CountProvider>
-            {/* <Navbar /> */}
+            <AuthProvider>
             <NavbarDrawer/>
             {/* <Sidebar/> */}
             <div className="app-layout">
               <main className="main-content home-body">{children}</main>
             </div>
+            </AuthProvider>
           </CountProvider>
         </Body>
       </ThemeProvider>
