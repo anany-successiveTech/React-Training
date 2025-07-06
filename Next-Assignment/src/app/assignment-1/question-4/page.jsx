@@ -1,6 +1,5 @@
 "use client";
-import Counter from "@/component/Counter";
-import React from "react";
+import Counter from "@/component/counter";
 
 const Page = () => {
   return (
