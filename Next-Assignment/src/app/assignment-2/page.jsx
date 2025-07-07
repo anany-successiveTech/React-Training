@@ -1,0 +1,12 @@
+import Sidebar from '@/component/SideBar'
+import React from 'react'
+
+const Page = () => {
+  return (
+    <div>
+    
+    </div>
+  )
+}
+
+export default Page

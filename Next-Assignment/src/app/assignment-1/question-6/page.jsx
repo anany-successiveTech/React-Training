@@ -1,6 +1,6 @@
 "use client";
 
-import ColorButton from "@/component/colorButton";
+import ColorButton from "@/component/ColorButton";
 import React, { useState } from "react";
 
 const Page = () => {
@@ -18,6 +18,7 @@ const Page = () => {
         based on the color prop. Import and render the Button component in the
         App component with different text and color props.
       </p>
+
       <div style={{ marginBottom: "1rem" }}>
         <input
           type="text"

@@ -1,0 +1,254 @@
+/* === General layout === */
+.products-page {
+  padding: 2rem;
+  font-family: sans-serif;
+  color: #f0f0f0;
+}
+
+.light .products-page {
+  color: #222;
+}
+
+/* === Description (question text) === */
+.description {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+.light .description {
+  color: #333;
+}
+
+/* === Products grid === */
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 960px; /* optional: limit container width to fit 3 cards perfectly */
+  margin: 0 auto;   /* center container */
+}
+
+
+/* === Product Card === */
+.product-card {
+  width: 300px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #2c2c2c;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+}
+
+.light .product-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+/* === Product Image === */
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* === Product Details === */
+.product-details {
+  margin-top: 0.75rem;
+}
+
+.product-details h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.product-details p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+/* === Price === */
+.price {
+  font-weight: bold;
+  color: #00d4ff;
+}
+.light .price {
+  color: #0070f3;
+}
+
+/* === Button === */
+button {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* === Go to Cart Button Wrapper === */
+.go-to-cart {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+
+/* this is for cart page */
+
+/* === Cart Page Wrapper === */
+.cart-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #2c2c2c; /* dark background */
+  color: #f0f0f0; /* light text */
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.light .cart-page {
+  background-color: #fff; /* light background */
+  color: #222; /* dark text */
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* === Heading === */
+.cart-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* === Cart Items Container === */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* === Individual Cart Item === */
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 1rem;
+  background-color: #3a3a3a;
+}
+
+.light .cart-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+/* === Product Image === */
+.cart-item-image {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* === Product Details === */
+.cart-item-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* === Title === */
+.cart-item-details h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* === Description === */
+.cart-item-details p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* === Price === */
+.price {
+  font-weight: bold;
+  color: #00d4ff;
+}
+
+.light .price {
+  color: #0070f3;
+}
+
+/* === Remove Button === */
+.remove-button {
+  align-self: flex-start;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background-color: #e74c3c;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.remove-button:hover {
+  background-color: #c0392b;
+}
+
+/* === Cart Summary === */
+.cart-summary {
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.light .cart-summary {
+  color: #222;
+}
+
+/* === Empty Cart Message === */
+.empty-cart {
+  margin: 5rem auto;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #999;
+}
+
+.light .empty-cart {
+  color: #555;
+}
+.cart-page > button {
+  margin-top: 2rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #4285f4;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  width: max-content;
+  margin-left: auto;  /* aligns to right */
+  transition: background-color 0.2s ease;
+}
+
+.cart-page > button:hover {
+  background-color: #00aacc;
+}
+
+.light .cart-page > button {
+  background-color: #0070f3;
+  color: #fff;
+}
+
+.light .cart-page > button:hover {
+  background-color: #005ac1;
+}

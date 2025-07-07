@@ -1,0 +1,90 @@
+.counter-container {
+  background-color: #101010;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.counter-title {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.counter-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.counter-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #eee;
+  margin-bottom: 1.5rem;
+}
+
+.counter-buttons input {
+  padding: 0.8rem;
+  margin: 0.9rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #2a2a2a;
+  color: #eee;
+}
+
+.counter-buttons input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #666;
+}
+
+.counter-buttons button {
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  background-color: grey;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.05s ease;
+}
+
+.counter-buttons button:hover {
+  background-color: #bbb;
+}
+
+.counter-buttons button:active {
+  transform: scale(0.95); /* Zoom-out effect */
+}
+
+/* === LIGHT THEME OVERRIDES === */
+.light .counter-container {
+  background-color: #d8d5d5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.light .counter-title {
+  color: #333;
+}
+
+.light .counter-display {
+  color: #222;
+}
+
+.light .counter-buttons input {
+  background-color: #fff;
+  color: #222;
+  border: 1.5px solid #ccc;
+}
+
+.light .counter-buttons input:focus {
+  box-shadow: 0 0 5px #888;
+}
+
+.light .counter-buttons button {
+  background-color: grey;
+  color: white;
+}

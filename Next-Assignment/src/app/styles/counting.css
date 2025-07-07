@@ -1,5 +1,5 @@
-/* Counter.css */
-.counter-container {
+/* counting.css */
+.dark .count-box-container {
   background-color: #101010;
   padding: 2rem;
   max-width: 400px;
@@ -10,19 +10,43 @@
   font-family: Arial, sans-serif;
 }
 
-.counter-title {
+.light .count-box-container {
+  background-color: lightgrey;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.dark .count-box-title {
   color: #ccc;
   margin-bottom: 1rem;
 }
 
-.counter-display {
+.light .count-box-title {
+  color: #000;
+  margin-bottom: 1rem;
+
+}
+.light .count-box-display{
+    font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 1.5rem;
+  
+}
+
+.count-box-display {
   font-size: 2.5rem;
   font-weight: bold;
   color: #eee;
   margin-bottom: 1.5rem;
 }
 
-.counter-buttons button {
+
+.count-box-buttons button {
   padding: 0.5rem 1.5rem;
   margin: 0 0.5rem;
   font-size: 1.5rem;
@@ -34,10 +58,10 @@
   transition: background-color 0.3s ease, transform 0.05s ease;
 }
 
-.counter-buttons button:hover {
+.count-box-buttons button:hover {
   background-color: #bbb;
 }
 
-.counter-buttons button:active {
+.count-box-buttons button:active {
   transform: scale(0.95); /* Zoom-out effect */
 }

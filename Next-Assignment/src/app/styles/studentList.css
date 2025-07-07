@@ -1,0 +1,59 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #232222;
+}
+
+h2 {
+  color: #0077cc;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #1f1f1e;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.add-btn {
+  margin-top: 20px;
+  display: block;
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Light theme styles */
+.light .container {
+  background-color: #f0f0f0;
+}
+
+.light h2 {
+  color: #222222;
+}
+
+.light li {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light .add-btn {
+  background-color: #005fa3;
+  color: white;
+}

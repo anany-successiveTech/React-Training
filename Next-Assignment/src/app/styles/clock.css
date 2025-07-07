@@ -1,0 +1,12 @@
+.clock-container {
+  background-color: #6f6c6c;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  width: fit-content;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

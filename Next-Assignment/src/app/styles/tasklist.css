@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
 }
-.tasklist-container {
+.dark .tasklist-container {
   background-color: #1e1e1e;
   color: #f0f0f0;
   padding: 2rem;
@@ -23,11 +23,25 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
+.light .tasklist-container {
+  background-color: #e9e7e7c1;
+  color: #0e0e0e;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  text-align: center;
+}
 
-.tasklist-title {
+.dark .tasklist-title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: #ffffff;
+}
+.light .tasklist-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #121111;
 }
 
 .tasklist {
@@ -35,17 +49,19 @@
   padding-left: 0;
 }
 
-.tasklist-item {
+.dark .tasklist-item {
   background-color: #2b2b2b;
   padding: 0.75rem 1rem;
   margin-bottom: 0.6rem;
   border-radius: 8px;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
 
-.tasklist-item:hover {
-  background-color: #3a3a3a;
 }
-
+.light .tasklist-item {
+  background-color: #e1dede;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
 
