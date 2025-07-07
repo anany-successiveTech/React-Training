@@ -2,6 +2,7 @@
   padding: 0.8rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
+  border: 0.2px solid grey;
 }
 .dark .input-container input {
   padding: 1rem;
@@ -19,3 +20,4 @@
   font-size: large;
   background-color: rgb(172, 168, 168);
 }
+ 
