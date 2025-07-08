@@ -5,7 +5,10 @@ import Input from "@/component/Input";
 import "@/app/styles/localeStorage.css";
 
 const MyComponent = () => {
-  const [setValue, removeValue, getStoredValue] = UseLocalestorage("name", "random");
+  const [setValue, removeValue, getStoredValue] = UseLocalestorage(
+    "name",
+    "random"
+  );
   const [inputValue, setInputValue] = useState("");
   const [message, setMessage] = useState("");
 
@@ -13,12 +16,11 @@ const MyComponent = () => {
     setInputValue(event.target.value);
   };
   // console.log("the value", getStoredValue);
-  
 
   useEffect(() => {
     setTimeout(() => {
       setMessage("");
-    }, 2000);
+    }, 3000);
   }, [message]);
 
   const handleSet = () => {

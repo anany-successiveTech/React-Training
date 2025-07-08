@@ -2,9 +2,9 @@
 import React, { useContext, useState } from "react";
 import Button from "./Button";
 import { useRouter } from "next/navigation";
-import { ThemeContext } from "@/context/themeContext";
-import "@/app/styles/icon.css";
-import { CartContext } from "@/context/cartContext";
+import { ThemeContext } from "@/context/ThemeProvider";
+import { CartContext } from "@/context/CountProvider";
+import "@/app/styles/navBar.css";
 
 const Navbar = () => {
   const router = useRouter();
@@ -19,47 +19,48 @@ const Navbar = () => {
 
   return (
     <div className="btn-container">
-      {[1, 2].map((num) => (
+      {[1, 2, 3].map((num) => (
         <Button
           key={num}
           name={`assignment.${num}`}
           value={num}
-          onclick={(num) => handleOnclick(num)}
+          onclick={() => handleOnclick(num)}
           active={activeQuestion === num}
         />
       ))}
-      <div className="icons">
-        <button className="darkButton" onClick={toggleTheme}>
-          {theme === "light" ? (
-            <i
-              className="fa-solid fa-moon fa-2xl"
-              style={{ color: "#000000" }}
-            ></i>
-          ) : (
-            <i
-              className="fa-solid fa-sun fa-2xl"
-              style={{ color: "#ffffff" }}
-            ></i>
-          )}
-        </button>
-      </div>
-      <div className="cart-container">
-        <button
-          className="cart-button"
-          onClick={() => router.push("/assignment-2/question-11/cart")}
-        >
-          {theme === "light" ? (
-            <i className="fa-solid fa-cart-shopping fa-xl"></i>
-          ) : (
+
+      <div className="icon-container">
+        <div className="theme-toggle">
+          <button className="theme-button" onClick={toggleTheme}>
+            {theme === "light" ? (
+              <i
+                className="fa-solid fa-moon fa-2xl"
+                style={{ color: "#000000" }}
+              ></i>
+            ) : (
+              <i
+                className="fa-solid fa-sun fa-2xl"
+                style={{ color: "#ffffff" }}
+              ></i>
+            )}
+          </button>
+        </div>
+
+        <div className="navbar-cart">
+          <button
+            className="navbar-cart-button"
+            onClick={() => router.push("/assignment-2/question-11/cart")}
+          >
             <i
               className="fa-solid fa-cart-shopping fa-xl"
-              style={{ color: "#f7f7f8" }}
+              style={{ color: theme === "light" ? "#1f1f1f" : "#f0f0f0" }}
             ></i>
-          )}
-          {productCount}
-        </button>
+            <span className="cart-count">{productCount}</span>
+          </button>
+        </div>
       </div>
     </div>
   );
 };
+
 export default Navbar;

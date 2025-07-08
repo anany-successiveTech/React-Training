@@ -1,0 +1,55 @@
+.about-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: #e0e0e0;
+  font-family: sans-serif;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+.about-text {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.about-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #89b4fa;
+  text-decoration: none;
+  font-weight: 500;
+}
+.about-link span{
+    margin-right: 0.5rem;
+}
+
+.about-link:hover {
+  color: #cdd6f4;
+}
+/* === Light Theme Overrides === */
+.light .about-container {
+  color: #1f1f1f;
+}
+
+.light .about-title {
+  color: #111;
+}
+
+.light .about-text {
+  color: #333;
+}
+
+.light .about-link {
+  color: #0070f3;
+}
+
+.light .about-link:hover {
+  color: #0051a3;
+}

@@ -18,6 +18,8 @@ const EmployeeSalary = () => {
 
   const averageSalary = useMemo(() => {
     const total = employees.reduce((sum, emp) => sum + emp.salary, 0);
+    // console.log(total/6);
+    
     return Math.floor(total / employees.length);
   }, [employees]);
 

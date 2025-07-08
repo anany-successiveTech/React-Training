@@ -1,0 +1,53 @@
+.home-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: sans-serif;
+  color: #e0e0e0;
+}
+
+.home-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+.home-text {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #89b4fa;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.home-link:hover {
+  color: #cdd6f4;
+}
+
+/* Light theme overrides */
+.light .home-container {
+  color: #1f1f1f;
+}
+
+.light .home-title {
+  color: #111;
+}
+
+.light .home-text {
+  color: #333;
+}
+
+.light .home-link {
+  color: #0070f3;
+}
+
+.light .home-link:hover {
+  color: #0051a3;
+}

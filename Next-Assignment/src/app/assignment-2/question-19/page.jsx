@@ -5,9 +5,8 @@ import useTimer from "@/hooks/useTimer";
 
 function TimerComponent() {
   const { time, start, pause, reset } = useTimer(60);
-  
+
   console.log(time);
-  
 
   return (
     <div>
@@ -20,13 +19,13 @@ function TimerComponent() {
         control a countdown.
       </p>
       <div className="timer-container">
-         <h2>Countdown Timer</h2>
-      <div className="time-display">{time} sec</div>
-      <div className="button-group">
-        <button onClick={start}>Start</button>
-        <button onClick={pause}>Pause</button>
-        <button onClick={reset}>Reset</button>
-      </div>
+        <h2>Countdown Timer</h2>
+        <div className="time-display">{time} sec</div>
+        <div className="button-group">
+          <button onClick={start}>Start</button>
+          <button onClick={pause}>Pause</button>
+          <button onClick={reset}>Reset</button>
+        </div>
       </div>
     </div>
   );

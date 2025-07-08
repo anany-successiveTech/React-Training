@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/Navbar";
-import '../app/styles/body.css'
-import { ThemeContext, ThemeProvider } from "@/context/themeContext";
+import "../app/styles/body.css";
+import { ThemeContext, ThemeProvider } from "@/context/ThemeProvider";
 import { useContext } from "react";
-import { CountProvider } from "@/context/cartContext";
+import { CountProvider } from "@/context/CountProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,23 +17,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const Body=({children})=>{
-  const {theme}=useContext(ThemeContext);
-  console.log(theme)
-  return(
-    <body className={theme}>
-      {children}
-    </body>
-  )
-}
+const Body = ({ children }) => {
+  const { theme } = useContext(ThemeContext);
+  console.log(theme);
+  return <body className={theme}>{children}</body>;
+};
 
 export default function RootLayout({ children }) {
-
-
   return (
     <html lang="en">
       <head>
-         <link
+        <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
           integrity="sha512-..."
@@ -42,16 +36,16 @@ export default function RootLayout({ children }) {
         />
       </head>
       <ThemeProvider>
-      <Body className={`${geistSans.variable} ${geistMono.variable} font-sans `}>
-        <CountProvider>
-        <Navbar />
-        <div className="app-layout">
-          <main className="main-content">
-            {children}
-          </main>
-        </div>
-        </CountProvider>
-      </Body>
+        <Body
+          className={`${geistSans.variable} ${geistMono.variable} font-sans `}
+        >
+          <CountProvider>
+            <Navbar />
+            <div className="app-layout">
+              <main className="main-content">{children}</main>
+            </div>
+          </CountProvider>
+        </Body>
       </ThemeProvider>
     </html>
   );

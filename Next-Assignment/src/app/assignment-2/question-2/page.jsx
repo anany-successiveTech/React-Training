@@ -26,7 +26,7 @@ const Page = () => {
             <Input
               type="text"
               placeholder="First Name"
-              onChange={(e) => setFirstName(e.target.value)}
+              onChange={(event) => setFirstName(event.target.value)}
             />
           
           </div>

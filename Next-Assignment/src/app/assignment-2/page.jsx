@@ -1,4 +1,4 @@
-import Sidebar from '@/component/SideBar'
+'use-client'
 import React from 'react'
 
 const Page = () => {
