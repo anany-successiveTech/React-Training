@@ -1,8 +1,9 @@
 /* === General layout === */
 .products-page {
-  padding: 2rem;
+  padding: 1rem;
   font-family: sans-serif;
   color: #f0f0f0;
+  margin-bottom: 8rem;
 }
 
 .light .products-page {
@@ -175,7 +176,7 @@ button {
 /* === Price === */
 .price {
   font-weight: bold;
-  color: #00d4ff;
+  color: #65af10;
 }
 
 .light .price {

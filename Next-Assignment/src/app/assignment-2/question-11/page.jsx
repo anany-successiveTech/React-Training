@@ -53,7 +53,7 @@ const Page = () => {
 
   return (
     <div className="products-page">
-      <p style={{ textAlign: "center", margin: "2rem 2rem 6rem 2rem" }}>
+      <p style={{ textAlign: "center", margin: "2rem" }}>
         11. Build a shopping cart application using the useContext hook. Set up
         a context to manage the state of the shopping cart. Create components to
         display products and a shopping cart. Use the useContext hook to access

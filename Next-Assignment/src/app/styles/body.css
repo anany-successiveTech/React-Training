@@ -1,4 +1,22 @@
-/* === Layout Classes === */
+/* === Global and Layout === */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.page-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 40px;
+  flex-shrink: 0;
+}
+
 .app-layout {
   display: flex;
   height: calc(100vh - 60px); 
@@ -11,7 +29,26 @@
   border-right: 1px solid var(--border-color);
   height: 100%;
   overflow-y: auto;
-  flex-shrink: 0; 
+  flex-shrink: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #bbb transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
 }
 
 .assignment-layout {
@@ -19,15 +56,10 @@
   width: 100%;
   height: 100%;
 }
-
 .main-content {
   flex: 1;
-  padding: 1rem;
-  overflow-y: auto;
-  overflow-x: hidden;
   height: 100%;
-  
-  /* Thin Scrollbar Styling */
+  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #bbb transparent;
 }
@@ -49,23 +81,23 @@
   background-color: #999;
 }
 
-/* === Sidebar Button Container === */
+/* Sidebar button container with scroll */
 .sidebar-btn-container {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   padding: 1rem;
-  height: 100%;
+  height: 80vh;
   width: 220px;
   border-right: 1px solid var(--border-color);
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #bbb transparent;
 }
 
 .sidebar-btn-container::-webkit-scrollbar {
-  width: 4px;
+  width: 2px;
 }
 
 .sidebar-btn-container::-webkit-scrollbar-track {
@@ -80,16 +112,17 @@
 .sidebar-btn-container::-webkit-scrollbar-thumb:hover {
   background-color: #999;
 }
-.icons{
-    display: flex;
-    margin-top: 1.6rem;
-    margin-left: 2rem;
-    height: 4vh;
-    border-radius: 0.5rem;
-    align-items: center;
-}
-.icons button{
-    padding: 1rem;
-    border: none;
 
+.icons {
+  display: flex;
+  margin-top: 1.6rem;
+  margin-left: 2rem;
+  height: 4vh;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+.icons button {
+  padding: 1rem;
+  border: none;
 }

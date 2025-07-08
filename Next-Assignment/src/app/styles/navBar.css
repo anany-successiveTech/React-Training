@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   /* border: 1px solid red; */
-  margin: 0rem 1.2rem;
+  margin: 0rem 2.5rem;
 }
 
 .theme-button {
@@ -16,8 +16,8 @@
   align-items: center;
   justify-content: center;
 }
-.cart-count{
-  margin: 0rem 0rem 0.6rem 1rem;
+.cart-count {
+  margin: 0rem 0rem 2rem 1rem;
 }
 .theme-icon-light,
 .theme-icon-dark {
@@ -25,13 +25,11 @@
   display: block;
 }
 
-/* === Cart Styles === */
 .navbar-cart {
   display: flex;
   align-items: center;
-  justify-content: center; 
-  margin-top: 1.2rem;
-  /* border: 1px solid red; */
+  justify-content: center;
+  margin-top: 1.3rem;
 }
 
 .navbar-cart-button {
@@ -41,7 +39,7 @@
   font-size: 1.2rem;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   gap: 0.4rem;
   color: inherit;
   line-height: 1;
@@ -49,13 +47,62 @@
   padding: 0;
   height: 100%;
 }
-
 .navbar-cart-button i {
   display: block;
   width: 20px;
   height: 20px;
 }
-.icon-container{
+.icon-container {
   display: flex;
-  margin-bottom: 0.8rem;
+  /* margin-bottom: 0.8rem; */
+  padding-bottom: 1.6rem;
+}
+.btn-container {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0.2rem 1rem 1.5rem 1rem;
+  justify-content: center;
+}
+/* .nav-style{
+  border-radius: 1.5rem;
+  background-color: rgb(37, 36, 36);
+}
+.light .nav-style{
+  background-color: rgba(238, 236, 236, 0.925);
+  box-shadow: 0 2px 10px rgba(124, 123, 123, 0.4);
+} */
+.dark .btn {
+  padding: 1rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: medium;
+  background-color: rgb(48, 47, 47);
+  color: white;
+}
+.light .btn {
+  padding: 1rem;
+  margin: 1rem;
+  border: none;
+  color: black;
+  border-radius: 0.5rem;
+  font-size: medium;
+  background-color: rgba(244, 239, 239, 0.927);
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn.active {
+  background-color: rgba(51, 203, 51, 0.624);
 }
