@@ -1,5 +1,5 @@
-import React from "react";
-import '@/app/styles/input.css'
+import React from 'react'
+import "@/app/styles/input.css"
 
 const Input = ({ type, value, onChange, placeholder }) => {
   return (

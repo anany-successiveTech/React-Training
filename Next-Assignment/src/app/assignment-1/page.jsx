@@ -1,11 +1,9 @@
-import React from 'react';
-
-const Page = () => {
+const Home = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1>Assignment-1</h1>
+    <div>
+      <h1 style={{textAlign:"center"}}>Assignment-1</h1>
     </div>
   );
 };
 
-export default Page;
+export default Home;

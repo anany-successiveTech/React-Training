@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Clock from '../../../component/Clock'
+import Clock from "@/component/Clock"
 
 const Page = () => {
   return (
