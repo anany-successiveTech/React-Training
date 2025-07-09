@@ -1,0 +1,96 @@
+/* === Base Button Styles === */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #808080; /* default grey for unknown type */
+  transition: background 0.3s, color 0.3s;
+}
+
+/* === Dark Theme Buttons (default) === */
+.btn-primary {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* === Button Container Box for Demo === */
+.main-btn-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.q8-demo-container h2 {
+  text-align: center;
+}
+.q8-button-row {
+  margin-top: 1rem;
+}
+.boxOfBtn {
+  background-color: #444;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+/* === Result Message === */
+.q8-message {
+  border: 2px solid red;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-radius: 6px;
+}
+
+/* === Light Theme Scoped === */
+.light .boxOfBtn {
+  background-color: #f4f4f4;
+}
+
+.light .btn-primary {
+  background-color: #e0f0ff;
+  color: #004085;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.light .btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0rem 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.light .btn-danger {
+  background-color: #ffe0e0;
+  color: #721c24;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.light .q8-message {
+  background-color: #fff0f0;
+  color: #222;
+  border-color: #ffcccc;
+}
