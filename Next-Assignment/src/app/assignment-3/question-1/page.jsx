@@ -7,10 +7,10 @@ import Input from "@/component/Input";
 import "@/app/styles/auth.css";
 
 const AuthConsumer = () => {
-  const { user, login, logout, error } = useContext(AuthContext); 
+  const { user, login, logout, error } = useContext(AuthContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const router = useRouter(); 
+  const router = useRouter();
 
   const handleLogin = () => {
     if (username.trim() && password.trim()) {
@@ -22,7 +22,7 @@ const AuthConsumer = () => {
       if (redirectPath) {
         localStorage.removeItem("redirectAfterLogin");
         console.log(redirectPath, "This is your path");
-        router.push(redirectPath); 
+        router.push(redirectPath);
       }
     }
   };
@@ -71,9 +71,7 @@ const AuthConsumer = () => {
                 />
               </div>
               {error && (
-                <p style={{ color: "red", marginBottom: "1rem" }}>
-                  {error}
-                </p>
+                <p style={{ color: "red", marginBottom: "1rem" }}>{error}</p>
               )}
               <button onClick={handleLogin} className="auth-button">
                 Log in

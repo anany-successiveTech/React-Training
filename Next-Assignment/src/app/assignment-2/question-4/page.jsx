@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
-import "../../styles/randomNumber.css";
+import "@/app/styles/randomNumber.css";
 
 const RandomNumberGenerator = () => {
   const [randomNumber, setRandomNumber] = useState(null);
   const handleClick = () => {
     let number = Math.floor(Math.random() * 100) + 1;
-    setRandomNumber(number)
+    setRandomNumber(number);
   };
 
-  useEffect(()=>{
-    setRandomNumber(Math.floor(Math.random() * 100) + 1)
-  }, [])
+  useEffect(() => {
+    setRandomNumber(Math.floor(Math.random() * 100) + 1);
+  }, []);
 
   return (
     <div className="number-container">

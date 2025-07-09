@@ -1,7 +1,7 @@
-import UserCard from "@/component/UserCard";
-import '@/app/styles/userCard.css'
+import UserCard from "@/component/userCard";
+import "@/app/styles/home.css";
 
-const User = () => {
+const Page = () => {
   const users = [
     {
       name: "Anany More",
@@ -23,7 +23,6 @@ const User = () => {
       email: "manojkumar3443@gmail.com",
       imageUrl: "/manoj.png",
     },
-    
   ];
 
   return (
@@ -35,19 +34,20 @@ const User = () => {
         Create multiple instances of the UserCard component with different user
         data.
       </p>
-      <div className="user-card-wrapper">
-        {users.map((user, index) => (
-          <div className="user-card-item" key={index}>
+      <div className="container">
+        {users.map((user, index) => {
+          return (
             <UserCard
+              key={index}
               name={user.name}
               email={user.email}
               imageUrl={user.imageUrl}
             />
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
 };
 
-export default User;
+export default Page;
