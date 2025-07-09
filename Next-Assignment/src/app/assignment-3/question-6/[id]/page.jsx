@@ -44,6 +44,8 @@ const Page = () => {
     },
   ];
   const { id } = useParams();
+
+  
   // console.log(id);
   useEffect(() => {
     setProductFound(products.find((item) => item.id == id));

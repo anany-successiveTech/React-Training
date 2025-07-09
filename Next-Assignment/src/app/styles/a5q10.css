@@ -1,0 +1,103 @@
+/* a5q15.css */
+
+.pageWrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.pageTitle {
+  color: #222;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.loggerWrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.loggerTitle {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.loggerCount {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.loggerButton {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loggerButton:hover {
+  background-color: #005bb5;
+}
+
+/* logger components css */
+
+.pageWrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.pageTitle {
+  color: #222;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.loggerWrapper {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.loggerTitle {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.loggerCount {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.loggerButton {
+  padding: 10px 16px;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loggerButton:hover {
+  background-color: #005bb5;
+}

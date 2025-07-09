@@ -1,0 +1,71 @@
+/* Default: Dark Theme */
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  color: #ddd;
+  width: 800px;
+  background-color: #121212;
+}
+
+.main-user{
+    display: flex;
+    justify-content: center;
+    
+}
+.user-list li {
+  background: #222;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.loading,
+.error-message {
+  text-align: center;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.error-message {
+  margin-top: 1.5rem;
+}
+
+.retry-button {
+  padding: 8px 14px;
+  background-color: #bb86fc;
+  color: #121212;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: #985eff;
+}
+
+/* Light theme overrides */
+.light .user-list {
+  color: #121212;
+  background-color: #fff;
+}
+
+.light .user-list li {
+  background: #f5f5f5;
+}
+
+.light .loading,
+.light .error-message {
+  color: #121212;
+}
+
+.light .retry-button {
+  background-color: #6200ee;
+  color: #fff;
+}
+
+.light .retry-button:hover {
+  background-color: #3700b3;
+}

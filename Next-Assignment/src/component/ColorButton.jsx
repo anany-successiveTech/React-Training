@@ -9,7 +9,7 @@ const ColorButton = ({ text, color }) => {
     borderRadius: "5px",
     fontSize: "16px",
     cursor: "pointer",
-    width: "40%"
+    width: "90%"
   };
   return <button style={style}>{text || "Click me"}</button>
 };

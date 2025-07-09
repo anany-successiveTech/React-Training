@@ -1,0 +1,81 @@
+.a6q6-container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: sans-serif;
+  background-color: #121212;
+  color: #eee;
+  border-radius: 8px;
+}
+
+.a6q6-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #bb86fc;
+}
+
+.a6q6-user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.a6q6-user-item {
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  background: #1e1e1e;
+  border-radius: 4px;
+  border: 1px solid #333;
+}
+
+.a6q6-loading {
+  text-align: center;
+  margin: 1rem;
+  color: #999;
+}
+
+.a6q6-error-block {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.a6q6-error-text {
+  color: #ff6b6b;
+  margin-bottom: 0.5rem;
+}
+
+.a6q6-retry-button {
+  background-color: #bb86fc;
+  color: #121212;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.a6q6-retry-button:hover {
+  background-color: #985eff;
+}
+
+/* Light mode */
+.light .a6q6-container {
+  background-color: #fff;
+  color: #222;
+}
+
+.light .a6q6-user-item {
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+}
+
+.light .a6q6-title {
+  color: #6200ee;
+}
+
+.light .a6q6-error-text {
+  color: #d32f2f;
+}
+
+.light .a6q6-retry-button {
+  background-color: #6200ee;
+  color: white;
+}

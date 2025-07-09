@@ -101,13 +101,14 @@ const NavbarDrawer = () => {
   const { productCount } = useContext(CartContext);
   const router = useRouter();
 
-  const assignments = [1, 2, 3, 4];
+  const assignments = [1, 2, 3, 4, 5];
 
   const assignmentQuestionCounts = {
     1: 6,
     2: 19,
     3: 6,
     4: 14,
+    5: 11
   };
 
   const handleAssignmentClick = (assignmentNo) => {
