@@ -2,8 +2,7 @@
 
 import ColorButton from "@/component/ColorButton";
 import React, { useState } from "react";
-import "@/app/styles/colorChnger.css"
-import Input from "@/component/Input";
+import "@/app/styles/colorChanger.css"
 
 const Page = () => {
   const [text, setText] = useState("");
