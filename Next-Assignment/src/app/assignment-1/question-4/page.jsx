@@ -1,5 +1,5 @@
 "use client";
-import Counter from "@/component/counter";
+import Counter from "@/component/Counter"
 
 const Page = () => {
   return (
