@@ -1,4 +1,4 @@
-import UserCard from "@/component/userCard";
+import UserCard from "@/component/UserCard"
 import "@/app/styles/home.css";
 
 const Page = () => {

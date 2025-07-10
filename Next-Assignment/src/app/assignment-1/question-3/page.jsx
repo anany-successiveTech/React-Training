@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Weather from "@/component/weather";
+import Weather from "@/component/Weather"
 
 const Page = () => {
   const [temperature, setTemperature] = useState("");
