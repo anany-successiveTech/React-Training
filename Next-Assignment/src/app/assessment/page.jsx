@@ -89,23 +89,24 @@ const TicTacToe = () => {
         </Typography>
       </div>
 
-      <div className="ttt-game-container">
-        <div className="ttt-row">
-          <button onClick={() => handleClick(0)} disabled={!!winner || cell[0] !== ""}>{cell[0]}</button>
-          <button onClick={() => handleClick(1)} disabled={!!winner || cell[1] !== ""}>{cell[1]}</button>
-          <button onClick={() => handleClick(2)} disabled={!!winner || cell[2] !== ""}>{cell[2]}</button>
-        </div>
-        <div className="ttt-row">
-          <button onClick={() => handleClick(3)} disabled={!!winner || cell[3] !== ""}>{cell[3]}</button>
-          <button onClick={() => handleClick(4)} disabled={!!winner || cell[4] !== ""}>{cell[4]}</button>
-          <button onClick={() => handleClick(5)} disabled={!!winner || cell[5] !== ""}>{cell[5]}</button>
-        </div>
-        <div className="ttt-row">
-          <button onClick={() => handleClick(6)} disabled={!!winner || cell[6] !== ""}>{cell[6]}</button>
-          <button onClick={() => handleClick(7)} disabled={!!winner || cell[7] !== ""}>{cell[7]}</button>
-          <button onClick={() => handleClick(8)} disabled={!!winner || cell[8] !== ""}>{cell[8]}</button>
-        </div>
-      </div>
+     <div className="ttt-game-container">
+  <div className="ttt-row">
+    <button onClick={() => handleClick(0)} disabled={winner || cell[0] !== ""}>{cell[0]}</button>
+    <button onClick={() => handleClick(1)} disabled={winner || cell[1] !== ""}>{cell[1]}</button>
+    <button onClick={() => handleClick(2)} disabled={winner || cell[2] !== ""}>{cell[2]}</button>
+  </div>
+  <div className="ttt-row">
+    <button onClick={() => handleClick(3)} disabled={winner || cell[3] !== ""}>{cell[3]}</button>
+    <button onClick={() => handleClick(4)} disabled={winner || cell[4] !== ""}>{cell[4]}</button>
+    <button onClick={() => handleClick(5)} disabled={winner || cell[5] !== ""}>{cell[5]}</button>
+  </div>
+  <div className="ttt-row">
+    <button onClick={() => handleClick(6)} disabled={winner || cell[6] !== ""}>{cell[6]}</button>
+    <button onClick={() => handleClick(7)} disabled={winner || cell[7] !== ""}>{cell[7]}</button>
+    <button onClick={() => handleClick(8)} disabled={winner || cell[8] !== ""}>{cell[8]}</button>
+  </div>
+</div>
+
 
       <div className="ttt-controls">
         <button onClick={handleResetGame}>Reset Game</button>
