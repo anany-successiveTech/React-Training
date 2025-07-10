@@ -1,6 +1,9 @@
 "use client";
-import React, { useContext } from "react";
+
+import React, { useContext, useState } from "react";
 import { CartContext } from "@/context/CountProvider";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 import "@/app/styles/shoping.css";
 
 const products = [
@@ -50,6 +53,18 @@ const products = [
 
 const Page = () => {
   const { addProduct } = useContext(CartContext);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [addedItemName, setAddedItemName] = useState("");
+
+  const handleAddToCart = (product) => {
+    addProduct(product);
+    setAddedItemName(product.title);
+    setSnackbarOpen(true);
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false);
+  };
 
   return (
     <div className="products-page">
@@ -62,24 +77,39 @@ const Page = () => {
       </p>
 
       <div className="products-list">
-        {products.map((PorductItem) => (
-          <div key={PorductItem.id} className="product-card">
+        {products.map((product) => (
+          <div key={product.id} className="product-card">
             <img
-              src={PorductItem.image}
-              alt={PorductItem.title}
+              src={product.image}
+              alt={product.title}
               className="product-image"
             />
             <div className="product-details">
-              <h3>{PorductItem.title}</h3>
-              <p>{PorductItem.description}</p>
-              <p className="price">Rs.{PorductItem.price}</p>
-              <button onClick={() => addProduct(PorductItem)}>
+              <h3>{product.title}</h3>
+              <p>{product.description}</p>
+              <p className="price">Rs.{product.price}</p>
+              <button onClick={() => handleAddToCart(product)}>
                 Add to Cart
               </button>
             </div>
           </div>
         ))}
       </div>
+
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={1000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+          {addedItemName} added to cart!
+        </Alert>
+      </Snackbar>
     </div>
   );
 };

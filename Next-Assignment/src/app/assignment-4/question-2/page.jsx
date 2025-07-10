@@ -1,6 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
+import {
+  TextField,
+  Checkbox,
+  FormControlLabel,
+  RadioGroup,
+  Radio,
+  Button,
+  FormControl,
+  FormLabel,
+} from "@mui/material";
 import "@/app/styles/formShow.css";
 
 const SimpleForm = () => {
@@ -25,71 +35,56 @@ const SimpleForm = () => {
 
   return (
     <div>
-      <p style={{ textAlign: "center", margin: "2rem" }}>
+      <p className="form-desc">
         2. Build a form that includes various input fields like text inputs,
         checkboxes, and radio buttons. Ensure that each input is a controlled
         component. When the user submits the form, log the form data to the
-        console.{" "}
+        console.
       </p>
-      <form onSubmit={handleSubmit} style={{ maxWidth: 400, margin: "auto" }}>
-        <div style={{ marginBottom: 12 }}>
-          <label>
-            Name: <br />
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
+
+      <form onSubmit={handleSubmit} className="form-container">
+        <TextField
+          label="Name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          variant="outlined"
+          fullWidth
+          required
+          className="form-input"
+        />
+
+        <FormControlLabel
+          control={
+            <Checkbox
+              name="agree"
+              checked={formData.agree}
               onChange={handleChange}
-              placeholder="Enter your name"
-              required
-              style={{ width: "100%", padding: 8 }}
             />
-          </label>
-        </div>
+          }
+          label="I agree to the terms"
+          className="form-checkbox"
+        />
 
-      <div style={{ marginBottom: 12 }}>
-        <label>
-          <input
-            type="checkbox"
-            name="agree"
-            checked={formData.agree}
+        <FormControl className="form-radio-group">
+          <FormLabel>Gender</FormLabel>
+          <RadioGroup
+            row
+            name="gender"
+            value={formData.gender}
             onChange={handleChange}
-          />{" "}
-          I agree to the terms'use client'
+          >
+            <FormControlLabel value="male" control={<Radio />} label="Male" />
+            <FormControlLabel value="female" control={<Radio />} label="Female" />
+          </RadioGroup>
+        </FormControl>
 
-import React from "react";
-        </label>
-      </div>
-
-        <div style={{ marginBottom: 12 }}>
-          Gender: <br />
-          <label>
-            <input
-              type="radio"
-              name="gender"
-              value="male"
-              checked={formData.gender === "male"}
-              onChange={handleChange}
-            />{" "}
-            Male
-          </label>{" "}
-          <label>
-            <input
-              type="radio"
-              name="gender"
-              value="female"
-              checked={formData.gender === "female"}
-              onChange={handleChange}
-            />{" "}
-            Female
-          </label>
-        </div>
-
-        <button type="submit" style={{ padding: "8px 16px" }}>
+        <Button variant="contained" type="submit" className="form-button">
           Submit
-        </button>
+        </Button>
       </form>
     </div>
   );
 };
+
 export default SimpleForm;

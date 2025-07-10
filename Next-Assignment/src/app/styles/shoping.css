@@ -28,9 +28,8 @@
   gap: 1.5rem;
   justify-content: center;
   max-width: 960px; /* optional: limit container width to fit 3 cards perfectly */
-  margin: 0 auto;   /* center container */
+  margin: 0 auto; /* center container */
 }
-
 
 /* === Product Card === */
 .product-card {
@@ -96,7 +95,6 @@ button {
   text-align: center;
 }
 
-
 /* this is for cart page */
 
 /* === Cart Page Wrapper === */
@@ -108,13 +106,13 @@ button {
   color: #f0f0f0; /* light text */
   font-family: Arial, sans-serif;
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 .light .cart-page {
   background-color: #fff; /* light background */
   color: #222; /* dark text */
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 /* === Heading === */
@@ -200,7 +198,6 @@ button {
   background-color: #c0392b;
 }
 
-/* === Cart Summary === */
 .cart-summary {
   margin-top: 2rem;
   text-align: right;
@@ -212,7 +209,6 @@ button {
   color: #222;
 }
 
-/* === Empty Cart Message === */
 .empty-cart {
   margin: 5rem auto;
   font-size: 1.25rem;
@@ -234,7 +230,7 @@ button {
   font-weight: bold;
   display: block;
   width: max-content;
-  margin-left: auto;  /* aligns to right */
+  margin-left: auto;
   transition: background-color 0.2s ease;
 }
 

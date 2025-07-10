@@ -1,12 +1,14 @@
 "use client";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import '@/component/SideBar'
-import '@/app/styles/body.css'
+import "@/component/SideBar";
+import "@/app/styles/body.css";
 import { ThemeContext, ThemeProvider } from "@/context/ThemeProvider";
 import { useContext } from "react";
 import { CountProvider } from "@/context/CountProvider";
 import NavbarDrawer from "@/component/SideBar";
+import { AuthProvider } from "@/context/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +22,6 @@ const geistMono = Geist_Mono({
 
 const Body = ({ children }) => {
   const { theme } = useContext(ThemeContext);
-  console.log(theme);
   return <body className={theme}>{children}</body>;
 };
 
@@ -37,16 +38,14 @@ export default function RootLayout({ children }) {
         />
       </head>
       <ThemeProvider>
-        <Body
-          className={`${geistSans.variable} ${geistMono.variable} font-sans `}
-        >
+        <Body>
           <CountProvider>
-            {/* <Navbar /> */}
-            <NavbarDrawer/>
-            {/* <Sidebar/> */}
-            <div className="app-layout">
-              <main className="main-content home-body">{children}</main>
-            </div>
+            <AuthProvider>
+              <NavbarDrawer />
+              <div className="app-layout">
+                <main className="main-content home-body">{children}</main>
+              </div>
+            </AuthProvider>
           </CountProvider>
         </Body>
       </ThemeProvider>

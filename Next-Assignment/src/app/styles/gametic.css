@@ -1,0 +1,166 @@
+.ttt-main-container {
+  max-width: 360px;
+  margin: 40px auto;
+  padding: 24px 20px;
+  border-radius: 10px;
+  user-select: none;
+  color: #333;
+}
+
+.ttt-main-container.light {
+  background-color: #ffffff;
+  color: #222;
+}
+
+.ttt-header {
+  text-align: center;
+}
+
+.ttt-header h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.ttt-main-container.light .ttt-header h1 {
+  color: #111;
+}
+
+.ttt-game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ttt-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.ttt-row button {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  background-color: #f7f7f7;
+  border: 1px solid rgb(235, 232, 232);
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.7);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+  color: #444;
+  font-weight: 600;
+}
+
+.ttt-main-container.light .ttt-row button {
+  background-color: #f0f0f0;
+  color: #666666;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.ttt-row button:hover:not(:disabled) {
+  background-color: #e6e6e6;
+  border-color: #999;
+}
+
+.ttt-main-container.light .ttt-row button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+  color: #555555;
+}
+
+.ttt-row button:disabled {
+  cursor: not-allowed;
+  color: #aaa;
+  background-color: #f9f9f9;
+  border-color: #ddd;
+  box-shadow: none;
+}
+
+.ttt-main-container.light .ttt-row button:disabled {
+  background-color: #fafafa;
+  border-color: #ddd;
+  color: #aaa;
+  box-shadow: none;
+}
+
+.ttt-controls {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.ttt-controls button {
+  padding: 10px 24px;
+  font-size: 1rem;
+  background-color: #4285f4;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.ttt-main-container.light .ttt-controls button {
+  background-color: #dcdcdc;
+  color: #444;
+  border: 1px solid #bbb;
+}
+
+.ttt-controls button:hover {
+  background-color: #356ac0;
+}
+
+.ttt-main-container.light .ttt-controls button:hover {
+  background-color: #c0c0c0;
+  border-color: #999;
+}
+
+@media (max-width: 480px) {
+  .ttt-main-container {
+    max-width: 95vw;
+    padding: 16px 12px;
+  }
+
+  .ttt-row button {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+  }
+}
+
+.ttt-ass-btn {
+  margin-left: 16px;
+  margin-right: 2rem;
+  padding: 6px 16px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  user-select: none;
+}
+
+.ttt-main-container.light .ttt-ass-btn {
+  background-color: #dcdcdc;
+  color: #444;
+}
+
+.ttt-ass-btn:hover {
+  background-color: #06b300;
+}
+
+.ttt-main-container.light .ttt-ass-btn:hover {
+  background-color: #b0b0b0;
+  color: #222;
+}

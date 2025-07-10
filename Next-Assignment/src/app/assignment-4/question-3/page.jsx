@@ -15,8 +15,9 @@ const ShowComponent = () => {
   const handleButtonClick = () => {
     if (inputValue === "show") {
       setShow(true);
+    } else {
+      setShow(false);
     }
-    setShow(false);
   };
 
   return (

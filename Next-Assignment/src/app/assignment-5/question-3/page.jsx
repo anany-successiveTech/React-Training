@@ -12,7 +12,7 @@ export default function Users() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("https://jsonplaceholder.typicode.com/users");
+      const res = await fetch("https://jsonplaceholder.typicode.com/usekugrs");
       if (!res.ok) throw new Error("Failed to fetch users");
       const data = await res.json();
       setUsers(data);

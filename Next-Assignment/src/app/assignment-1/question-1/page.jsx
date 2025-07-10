@@ -1,6 +1,6 @@
 import React from "react";
 import "@/app/styles/home.css";
-import Greeting from "@/component/greeting";
+import Greeting from "@/component/Greeting"
 const Page = () => {
   return (
     <div>

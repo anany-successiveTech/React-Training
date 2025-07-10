@@ -1,0 +1,49 @@
+/* === Base Layout === */
+.form-desc {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.form-input {
+  margin-bottom: 1rem;
+}
+
+.form-checkbox {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.form-radio-group {
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.form-button {
+  margin-top: 1rem;
+}
+
+/* === Light Theme === */
+.light .form-desc {
+  color: #222;
+}
+
+.light .form-container {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.light .form-checkbox,
+.light .form-radio-group {
+  color: #111;
+}

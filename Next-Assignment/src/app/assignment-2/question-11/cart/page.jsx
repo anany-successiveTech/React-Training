@@ -19,7 +19,7 @@ const Cart = () => {
   if (productCount === 0) {
     return <p className="empty-cart">Your cart is empty.</p>;
   }
-
+  
   return (
     <div className="cart-page">
       <h2>Your Shopping Cart</h2>
