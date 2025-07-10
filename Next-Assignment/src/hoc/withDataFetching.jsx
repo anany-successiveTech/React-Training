@@ -1,4 +1,5 @@
 import { use } from "react";
+export const dynamic = "force-dynamic";
 
 const withDataFetching = (WrappedComponent) => {
   return function FetchedDataComponent(props) {
