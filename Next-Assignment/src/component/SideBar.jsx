@@ -33,7 +33,6 @@ const NavbarDrawer = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { productCount } = useContext(CartContext);
   const router = useRouter();
-  
   const assignments = [1, 2, 3, 4, 5, 6];
 
   const assignmentQuestionCounts = {
@@ -41,7 +40,7 @@ const NavbarDrawer = () => {
     2: 19,
     3: 6,
     4: 14,
-    5: 11,
+    5: 12,
   };
 
   const handleAssignmentClick = (assignmentNo) => {
@@ -61,88 +60,61 @@ const NavbarDrawer = () => {
         position="fixed"
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
-        <Toolbar sx={{ position: "relative", justifyContent: "space-between" }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: 1,
-              flexShrink: 0,
-            }}
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            edge="start"
+            onClick={() => setOpenDrawer(true)}
+            sx={{ mr: 2 }}
           >
-            <IconButton
-              color="inherit"
-              edge="start"
-              onClick={() => setOpenDrawer(true)}
-              sx={{ mr: 0 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap>
-              Assignments
-            </Typography>
-          </Box>
+            <MenuIcon />
+          </IconButton>
 
-          <Box
-            sx={{
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              pointerEvents: "auto",
-            }}
+          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+            Assignments
+          </Typography>
+
+          {/* Cart Button */}
+          <IconButton
+            onClick={() => router.push("/assignment-2/question-11/cart")}
+            sx={{ position: "relative", mr: 1 }}
           >
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={() => router.push("/assessment")}
-              sx={{ fontWeight: "bold" }}
-            >
-              Assessment
-            </Button>
-          </Box>
-
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <IconButton
-              onClick={() => router.push("/assignment-2/question-11/cart")}
-              sx={{ position: "relative", mr: 1 }}
-            >
-              <i
-                className="fa-solid fa-cart-shopping"
+            <i
+              className="fa-solid fa-cart-shopping"
+              style={{
+                fontSize: "20px",
+                color: theme === "light" ? "#f0f0f0" : "#ffffff",
+              }}
+            ></i>
+            {productCount > 0 && (
+              <span
                 style={{
-                  fontSize: "20px",
-                  color: theme === "light" ? "#f0f0f0" : "#ffffff",
+                  position: "absolute",
+                  top: -4,
+                  right: -4,
+                  backgroundColor: "red",
+                  color: "white",
+                  borderRadius: "50%",
+                  padding: "2px 6px",
+                  fontSize: "12px",
+                  fontWeight: "bold",
+                  userSelect: "none",
                 }}
-              />
-              {productCount > 0 && (
-                <span
-                  style={{
-                    position: "absolute",
-                    top: -4,
-                    right: -4,
-                    backgroundColor: "red",
-                    color: "white",
-                    borderRadius: "50%",
-                    padding: "2px 6px",
-                    fontSize: "12px",
-                    fontWeight: "bold",
-                    userSelect: "none",
-                  }}
-                >
-                  {productCount}
-                </span>
-              )}
-            </IconButton>
+              >
+                {productCount}
+              </span>
+            )}
+          </IconButton>
 
-            <IconButton onClick={toggleTheme}>
-              <i
-                className={
-                  theme === "light" ? "fa-solid fa-moon" : "fa-solid fa-sun"
-                }
-                style={{ fontSize: "20px", color: "#ffffff" }}
-              />
-            </IconButton>
-          </Box>
+          {/* Theme Toggle Button */}
+          <IconButton onClick={toggleTheme}>
+            <i
+              className={
+                theme === "light" ? "fa-solid fa-moon" : "fa-solid fa-sun"
+              }
+              style={{ fontSize: "20px", color: "#ffffff" }}
+            ></i>
+          </IconButton>
         </Toolbar>
       </AppBar>
 
@@ -233,5 +205,6 @@ const NavbarDrawer = () => {
     </Box>
   );
 };
+
 
 export default NavbarDrawer;

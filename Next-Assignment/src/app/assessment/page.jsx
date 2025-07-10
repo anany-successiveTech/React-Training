@@ -1,7 +1,12 @@
 "use client";
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import "@/app/styles/gametic.css";
+=======
+import React, { useState } from "react";
+import "./game.css";
+>>>>>>> fff803ae710b7a51e82fd0f5bb0433ac96da82bc
 import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import Typography from "@mui/material/Typography";
@@ -32,6 +37,10 @@ const TicTacToe = () => {
         return;
       }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fff803ae710b7a51e82fd0f5bb0433ac96da82bc
     if (!cells.includes("") && !winner) {
       setWinner("Draw");
       setWinAlertOpen(true);
@@ -53,6 +62,7 @@ const TicTacToe = () => {
     }
   };
 
+<<<<<<< HEAD
   const makeComputerMove = (cells) => {
     if (winner) return;
 
@@ -71,6 +81,28 @@ const TicTacToe = () => {
     setCell(newCells);
     checkWinner(newCells);
   };
+=======
+const makeComputerMove = (cells) => {
+  if (winner) return;
+
+  const emptyIndexes = [];
+  for (let i = 0; i < cells.length; i++) {
+    if (cells[i] === "") {
+      emptyIndexes.push(i);
+    }
+  }
+
+  if (emptyIndexes.length === 0) return;
+
+  const randomIndex = emptyIndexes[Math.floor(Math.random() * emptyIndexes.length)];
+  const newCells = [...cells];
+  newCells[randomIndex] = "O";
+
+  setCell(newCells);
+  checkWinner(newCells);
+};
+
+>>>>>>> fff803ae710b7a51e82fd0f5bb0433ac96da82bc
 
   const handleResetGame = () => {
     setCell(Array(9).fill(""));
@@ -81,14 +113,20 @@ const TicTacToe = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div>
       <div className="ttt-header">
+=======
+    <div className="main-container">
+      <div className="header">
+>>>>>>> fff803ae710b7a51e82fd0f5bb0433ac96da82bc
         <h1>TIC TAC TOE</h1>
         <Typography variant="subtitle1" color="text.secondary">
           {winner ? "" : "Your Turn: X"}
         </Typography>
       </div>
 
+<<<<<<< HEAD
       <div className="ttt-game-container">
         <div className="ttt-row">
           <button onClick={() => handleClick(0)} disabled={!!winner || cell[0] !== ""}>{cell[0]}</button>
@@ -108,6 +146,27 @@ const TicTacToe = () => {
       </div>
 
       <div className="ttt-controls">
+=======
+      <div className="game-container">
+        <div className="first">
+          <button onClick={() => handleClick(0)}>{cell[0]}</button>
+          <button onClick={() => handleClick(1)}>{cell[1]}</button>
+          <button onClick={() => handleClick(2)}>{cell[2]}</button>
+        </div>
+        <div className="first">
+          <button onClick={() => handleClick(3)}>{cell[3]}</button>
+          <button onClick={() => handleClick(4)}>{cell[4]}</button>
+          <button onClick={() => handleClick(5)}>{cell[5]}</button>
+        </div>
+        <div className="first">
+          <button onClick={() => handleClick(6)}>{cell[6]}</button>
+          <button onClick={() => handleClick(7)}>{cell[7]}</button>
+          <button onClick={() => handleClick(8)}>{cell[8]}</button>
+        </div>
+      </div>
+
+      <div className="controles">
+>>>>>>> fff803ae710b7a51e82fd0f5bb0433ac96da82bc
         <button onClick={handleResetGame}>Reset Game</button>
       </div>
 
@@ -137,7 +196,13 @@ const TicTacToe = () => {
           severity={winner === "Draw" ? "info" : "success"}
           sx={{ width: "100%" }}
         >
+<<<<<<< HEAD
           {winner === "Draw" ? "It's a Draw!" : `🎉 Player ${winner} Wins!`}
+=======
+          {winner === "Draw"
+            ? "It's a Draw!"
+            : `🎉 Player ${winner} Wins!`}
+>>>>>>> fff803ae710b7a51e82fd0f5bb0433ac96da82bc
         </Alert>
       </Snackbar>
     </div>

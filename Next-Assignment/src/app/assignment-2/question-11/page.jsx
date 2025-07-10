@@ -96,6 +96,7 @@ const Page = () => {
         ))}
       </div>
 
+      {/* Snackbar component */}
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={1000}
