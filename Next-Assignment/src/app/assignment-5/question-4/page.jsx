@@ -1,4 +1,5 @@
 import PaginatedList from "./paginatedList";
+export const dynamic = "force-dynamic";
 
 async function fetchData() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {

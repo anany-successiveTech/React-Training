@@ -1,5 +1,6 @@
 import axios from "axios";
 import "@/app/styles/a5q5.css";
+export const dynamic = "force-dynamic";
 
 const FetchUsers = async () => {
   try {

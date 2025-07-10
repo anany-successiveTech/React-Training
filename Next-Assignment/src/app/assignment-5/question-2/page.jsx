@@ -1,4 +1,5 @@
 import UserList from '@/app/assignment-5/question-2/userList';
+export const dynamic = "force-dynamic";
 
 const fetchUsers = async () => {
   try {
