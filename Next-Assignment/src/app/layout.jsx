@@ -41,10 +41,11 @@ export default function RootLayout({ children }) {
         <Body>
           <CountProvider>
             <AuthProvider>
-              <NavbarDrawer />
-              <div className="app-layout">
-                <main className="main-content home-body">{children}</main>
-              </div>
+            <NavbarDrawer/>
+            {/* <Sidebar/> */}
+            <div className="app-layout">
+              <main className="main-content home-body">{children}</main>
+            </div>
             </AuthProvider>
           </CountProvider>
         </Body>

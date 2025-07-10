@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   Box,
   Drawer,
@@ -12,7 +12,6 @@ import {
   Typography,
   AppBar,
   IconButton,
-  Button,
 } from "@mui/material";
 import {
   Menu as MenuIcon,
@@ -27,13 +26,12 @@ import { CartContext } from "@/context/CountProvider";
 const drawerWidth = 280;
 
 const NavbarDrawer = () => {
-  const [openDrawer, setOpenDrawer] = React.useState(false);
-  const [openAssignments, setOpenAssignments] = React.useState(false);
-  const [activeAssignment, setActiveAssignment] = React.useState(null);
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const [openAssignments, setOpenAssignments] = useState(false);
+  const [activeAssignment, setActiveAssignment] = useState(null);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const { productCount } = useContext(CartContext);
   const router = useRouter();
-  
   const assignments = [1, 2, 3, 4, 5, 6];
 
   const assignmentQuestionCounts = {
@@ -41,13 +39,11 @@ const NavbarDrawer = () => {
     2: 19,
     3: 6,
     4: 14,
-    5: 11,
+    5: 12,
   };
 
   const handleAssignmentClick = (assignmentNo) => {
-    setActiveAssignment(
-      assignmentNo === activeAssignment ? null : assignmentNo
-    );
+    setActiveAssignment(assignmentNo === activeAssignment ? null : assignmentNo);
   };
 
   const handleQuestionClick = (assignmentNo, questionNo) => {
@@ -57,24 +53,15 @@ const NavbarDrawer = () => {
 
   return (
     <Box>
-      <AppBar
-        position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      >
-        <Toolbar sx={{ position: "relative", justifyContent: "space-between" }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: 1,
-              flexShrink: 0,
-            }}
-          >
+      <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+        <Toolbar sx={{ justifyContent: "space-between", alignItems: "center" }}>
+          {/* Left: Menu + Title */}
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <IconButton
               color="inherit"
               edge="start"
               onClick={() => setOpenDrawer(true)}
-              sx={{ mr: 0 }}
+              sx={{ mr: 1 }}
             >
               <MenuIcon />
             </IconButton>
@@ -83,25 +70,25 @@ const NavbarDrawer = () => {
             </Typography>
           </Box>
 
-          <Box
-            sx={{
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              pointerEvents: "auto",
-            }}
-          >
-            <Button
-              variant="contained"
-              color="secondary"
+          {/* Center: Assessment Button */}
+          <Box sx={{ position: "absolute", left: "50%", transform: "translateX(-50%)" }}>
+            <button
               onClick={() => router.push("/assessment")}
-              sx={{ fontWeight: "bold" }}
+              style={{
+                padding: "6px 12px",
+                borderRadius: "4px",
+                border: "none",
+                cursor: "pointer",
+                backgroundColor: "#ffffff",
+                color: "#1976d2",
+                fontWeight: "bold",
+              }}
             >
               Assessment
-            </Button>
+            </button>
           </Box>
 
+          {/* Right: Cart + Theme */}
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <IconButton
               onClick={() => router.push("/assignment-2/question-11/cart")}
@@ -113,7 +100,7 @@ const NavbarDrawer = () => {
                   fontSize: "20px",
                   color: theme === "light" ? "#f0f0f0" : "#ffffff",
                 }}
-              />
+              ></i>
               {productCount > 0 && (
                 <span
                   style={{
@@ -140,7 +127,7 @@ const NavbarDrawer = () => {
                   theme === "light" ? "fa-solid fa-moon" : "fa-solid fa-sun"
                 }
                 style={{ fontSize: "20px", color: "#ffffff" }}
-              />
+              ></i>
             </IconButton>
           </Box>
         </Toolbar>
@@ -173,9 +160,7 @@ const NavbarDrawer = () => {
         >
           <List>
             <ListItem disablePadding>
-              <ListItemButton
-                onClick={() => setOpenAssignments(!openAssignments)}
-              >
+              <ListItemButton onClick={() => setOpenAssignments(!openAssignments)}>
                 <HomeIcon sx={{ mr: 2 }} />
                 <ListItemText primary="Assignments" />
                 {openAssignments ? <ExpandLess /> : <ExpandMore />}
@@ -191,11 +176,7 @@ const NavbarDrawer = () => {
                       onClick={() => handleAssignmentClick(assignmentNo)}
                     >
                       <ListItemText primary={`Assignment ${assignmentNo}`} />
-                      {activeAssignment === assignmentNo ? (
-                        <ExpandLess />
-                      ) : (
-                        <ExpandMore />
-                      )}
+                      {activeAssignment === assignmentNo ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
 
                     <Collapse
@@ -204,14 +185,12 @@ const NavbarDrawer = () => {
                       unmountOnExit
                     >
                       <List component="div" disablePadding>
-                        {[...Array(assignmentQuestionCounts[assignmentNo])].map(
+                        {Array.from({ length: assignmentQuestionCounts[assignmentNo] || 0 }).map(
                           (_, i) => (
                             <ListItemButton
                               sx={{ pl: 6 }}
                               key={i}
-                              onClick={() =>
-                                handleQuestionClick(assignmentNo, i + 1)
-                              }
+                              onClick={() => handleQuestionClick(assignmentNo, i + 1)}
                             >
                               <ListItemText primary={`Question ${i + 1}`} />
                             </ListItemButton>
